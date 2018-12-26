@@ -3,10 +3,12 @@ name: Button
 route: /button
 ---
 
-import { Playground } from 'docz'
+import { Playground, PropsTable } from 'docz'
 import { Button } from './Button'
 
 # Button
+
+<PropsTable of={Button} />
 
 ## Basic usage
 
@@ -23,12 +25,11 @@ Flat Buttons<br/>
   <Button variant="flat" color="secondary">Secondary</Button>
   <Button variant="flat" color="secondary" disabled>Disabled</Button>
 <br/>
-Raised Buttons<br/>
+Outlined Buttons<br/>
   <Button variant="outlined" color="default">Default</Button>
   <Button variant="outlined" color="primary">Primary</Button>
   <Button variant="outlined" color="secondary">Secondary</Button>
   <Button variant="outlined" color="secondary" disabled>Disabled</Button>
-
 <br/>
 Text Buttons<br/>
   <Button variant="text" color="default">Default</Button>
