@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "private": true,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "module": "lib/index.js",
   "files": [ "dist", "README.md" ],
   "repository": {
     "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
+    "url": "https://github.com/bungalohomes"
   },
   "dependencies": {
     "@babel/core": "7.1.0",
