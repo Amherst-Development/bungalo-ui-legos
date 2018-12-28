@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "private": true,
-  "module": "lib/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [ "lib/*", "README.md" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bungalohomes"
