@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { grey, blue, orange } from '../../../colors'
+import { grey, blue, orange } from '../../colors'
 
 export class Button extends Component {
   render() {
