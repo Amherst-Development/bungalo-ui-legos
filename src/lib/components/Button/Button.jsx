@@ -121,7 +121,7 @@ Button.propTypes = {
   /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(['small', 'default', 'large']),
+  size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
   /**
    * If `true`, the button will be 100% width.
    */
@@ -135,7 +135,9 @@ Button.propTypes = {
 Button.defaultProps = {
   color: 'default',
   disabled: false,
-  variant: 'text'
+  variant: 'text',
+  size: 'default',
+  fullwidth: false
 };
 
 
