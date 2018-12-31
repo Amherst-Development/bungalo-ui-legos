@@ -16,10 +16,21 @@ export class Button extends Component {
           return { main: grey[300], accent: grey[1000] }
       }
     }
+
+    const getSize = (size) => {
+      switch (size){
+        case 'large':
+          return { padding: '214px 60px' }
+        case 'small': 
+          return { padding: '8px 16px' }
+        case 'default':
+        default:
+          return { padding: '16px 28px' }
+      }
+    }
     const DefaultButton = styled.button`
       font-size: 1em;
-      margin: 1em;
-      padding: 16px 28px;
+      padding: ${props => getSize(this.props.size).padding};
       border-radius: 0;
       border: none;
       cursor: pointer;
@@ -83,6 +94,11 @@ Button.propTypes = {
    * The colors of the button.
    */
   color: PropTypes.oneOf(['default', 'primary', 'secondary']),
+    /**
+   * The size of the button.
+   */
+  size: PropTypes.oneOf(['small', 'default', 'large']),
+
   /**
    * If `true`, the button will be disabled.
    */
