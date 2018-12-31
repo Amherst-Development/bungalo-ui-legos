@@ -20,17 +20,32 @@ export class Button extends Component {
     const getSize = (size) => {
       switch (size){
         case 'large':
-          return { padding: '214px 60px' }
+          return { 
+            padding: '8px 24px',
+            width: '256px',
+            height: '42px'
+          }
         case 'small': 
-          return { padding: '8px 16px' }
+          return { 
+            padding: '8px 16px',
+            width: '64px',
+            height: '31px'
+          }
         case 'default':
         default:
-          return { padding: '16px 28px' }
+          return { 
+            padding: '16px 28px',
+            width: '64px',
+            height: '36px'
+          }
       }
     }
     const DefaultButton = styled.button`
       font-size: 1em;
+      width: ${props => this.props.fullwidth ? '100%': ''};
       padding: ${props => getSize(this.props.size).padding};
+      min-width: ${props => getSize(this.props.size).width};
+      min-height: ${props => getSize(this.props.size).height};
       border-radius: 0;
       border: none;
       cursor: pointer;
@@ -69,14 +84,14 @@ export class Button extends Component {
 
     switch (this.props.variant) {
       case 'raised': 
-        return (<RaisedButton disabled={this.props.disabled}>{this.props.children}</RaisedButton>)
+        return (<RaisedButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</RaisedButton>)
       case 'flat': 
-        return (<FlatButton disabled={this.props.disabled}>{this.props.children}</FlatButton>)
+        return (<FlatButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</FlatButton>)
       case 'outlined':
-        return (<OutlinedButton disabled={this.props.disabled}>{this.props.children}</OutlinedButton>)
+        return (<OutlinedButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</OutlinedButton>)
       case 'text':
       default: 
-        return (<TextButton disabled={this.props.disabled}>{this.props.children}</TextButton>)
+        return (<TextButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</TextButton>)
     }
   }
 }
@@ -86,6 +101,10 @@ Button.propTypes = {
    * The content of the button.
    */
   children: PropTypes.node.isRequired,
+  /**
+   * The onClick function of the button.
+   */
+  onClick: PropTypes.node.onClick,
     /**
    * The variant of the button to use.
    */
@@ -94,11 +113,14 @@ Button.propTypes = {
    * The colors of the button.
    */
   color: PropTypes.oneOf(['default', 'primary', 'secondary']),
-    /**
+  /**
    * The size of the button.
    */
   size: PropTypes.oneOf(['small', 'default', 'large']),
-
+  /**
+   * If `true`, the button will be 100% width.
+   */
+  fullwidth: PropTypes.bool,
   /**
    * If `true`, the button will be disabled.
    */
