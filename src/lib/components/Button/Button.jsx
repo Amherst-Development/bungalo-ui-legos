@@ -21,30 +21,31 @@ export class Button extends Component {
       switch (size){
         case 'large':
           return { 
-            padding: '8px 24px',
-            width: '256px',
-            height: '42px'
+            padding: '8px 32px',
+            height: '60px',
+            fontSize: '1.1rem'
           }
         case 'small': 
           return { 
-            padding: '8px 16px',
-            width: '64px',
-            height: '31px'
+            padding: '4px 8px',
+            height: '31px',
+            fontSize: '0.8rem'
           }
-        case 'default':
+        case 'medium':
         default:
           return { 
-            padding: '16px 28px',
-            width: '64px',
-            height: '36px'
+            padding: '6px 16px',
+            height: '36px',
+            fontSize: '1rem'
           }
       }
     }
     const DefaultButton = styled.button`
-      font-size: 1em;
+      font-size: ${props => getSize(this.props.size).fontSize};
+      white-space: nowrap;
       width: ${props => this.props.fullwidth ? '100%': ''};
       padding: ${props => getSize(this.props.size).padding};
-      min-width: ${props => getSize(this.props.size).width};
+      min-width: 64px;
       min-height: ${props => getSize(this.props.size).height};
       border-radius: 0;
       border: none;
@@ -53,6 +54,10 @@ export class Button extends Component {
         color: ${grey[300]};
         background: ${grey[100]};
         cursor: not-allowed;
+        &:hover {
+          color: ${grey[300]};
+          background: ${grey[100]};
+        }
       }
       &:hover {
         color: ${orange[500]};

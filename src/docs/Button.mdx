@@ -5,6 +5,7 @@ route: /button
 
 import { Playground, PropsTable } from 'docz'
 import { Button } from '../lib'
+import { MarginWrapper } from '../docsHelpers'
 
 # Button
 
@@ -13,6 +14,7 @@ import { Button } from '../lib'
 ## Basic usage
 
 <Playground>
+  <MarginWrapper>
   Raised Buttons<br/>
   <Button variant="raised" color="default" onClick={ () => alert('You clicked the default raised button') }>Default</Button>
   <Button variant="raised" color="primary">Primary</Button>
@@ -36,4 +38,5 @@ Text Buttons<br/>
   <Button variant="text" color="primary">Primary</Button>
   <Button variant="text" color="secondary">Secondary</Button>
   <Button variant="text" color="secondary" disabled>Disabled</Button>
+  </MarginWrapper>
 </Playground>
