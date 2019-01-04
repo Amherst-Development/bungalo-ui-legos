@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 export class Colors extends Component {
-
   render() {
     const Color = styled.div`
-        background-color: ${props => props.value};
+        background-color: ${ props => props.value };
         height: 30px;
         width: 180px;
         padding: 4px 16px;
-    `;
-    window.console.log(this.props);
-    let colorList = Object.keys(this.props.colors).map((key) => {
-        return <Color key={key} value={this.props.colors[key]}>{key} : {this.props.colors[key]}</Color>
+    `
+    const { colors } = this.props
+    const colorList = Object.keys(colors).map((key) => {
+      return (
+        <Color key={ key } value={ colors[key] }>
+          {key}
+          :
+          {colors[key]}
+        </Color>
+      )
     })
 
     return (
@@ -23,7 +29,8 @@ export class Colors extends Component {
   }
 }
 
+Colors.propTypes = {
+  colors: PropTypes.array.isRequired,
+}
+
 export default Colors
-
-
-
