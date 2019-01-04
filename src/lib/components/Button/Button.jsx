@@ -5,7 +5,6 @@ import colors from '../../colors/colors.scss'
 
 export class Button extends Component {
   render() {
-    window.console.log('VARIABLES: ', colors)
     const getColor = (color) => {
       switch (color) {
         case 'primary':

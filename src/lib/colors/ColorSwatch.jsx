@@ -7,7 +7,6 @@ import colors from './colors.scss'
 export default class ColorSwatch extends Component {
   render() {
     const { name } = this.props
-    window.console.log('name: ', name)
     const Swatch = styled.div`
         background-color: ${ colors[name] };
         height: 80px;

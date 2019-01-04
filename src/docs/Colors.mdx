@@ -5,14 +5,19 @@ route: /colors
 
 import { Playground, PropsTable } from 'docz'
 import { ColorSwatch } from '../lib/colors'
-import colors from '../lib/colors/colors.scss'
 
 # Colors
+Colors are found and edited inside `lib/colors/colors.scss`
+
+When you add a new color, be sure to export it inside of that scss file. 
+
+Look at `lib/components/Button/Button.jsx` or `lib/colors/ColorSwatch.jsx` to see how to import and use the colors in these components.
+
+Eventually we will export this scss file to be used as the color template across our application.  
 
 <Playground>
     <ColorSwatch name="white" />
     <ColorSwatch name="black" />
-    <ColorSwatch name="orange" />
     <ColorSwatch name="grey" />
     <ColorSwatch name="greyTint" />
     <ColorSwatch name="greyLight" />
@@ -22,7 +27,7 @@ import colors from '../lib/colors/colors.scss'
     <ColorSwatch name="brassTint" />
     <ColorSwatch name="lemon" />
     <ColorSwatch name="lemonTint" />
+    <ColorSwatch name="orange" />
     <ColorSwatch name="apricot" />
     <ColorSwatch name="blueberry" />
-
 </Playground>
