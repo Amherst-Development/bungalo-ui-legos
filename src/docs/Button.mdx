@@ -4,36 +4,61 @@ route: /button
 ---
 
 import { Playground, PropsTable } from 'docz'
-import { Button } from '../lib/components/Button'
+import { Button } from '../lib'
+import { MarginWrapper } from '../docsHelpers'
 
 # Button
 
-<PropsTable of={Button} />
-
-## Basic usage
-
+## Default/Text Buttons
 <Playground>
-  Raised Buttons<br/>
-  <Button variant="raised" color="default">Default</Button>
-  <Button variant="raised" color="primary">Primary</Button>
-  <Button variant="raised" color="secondary">Secondary</Button>
-  <Button variant="raised" color="secondary" disabled>Disabled</Button>
-<br/>
-Flat Buttons<br/>
-  <Button variant="flat" color="default">Default</Button>
-  <Button variant="flat" color="primary">Primary</Button>
-  <Button variant="flat" color="secondary">Secondary</Button>
-  <Button variant="flat" color="secondary" disabled>Disabled</Button>
-<br/>
-Outlined Buttons<br/>
-  <Button variant="outlined" color="default">Default</Button>
-  <Button variant="outlined" color="primary">Primary</Button>
-  <Button variant="outlined" color="secondary">Secondary</Button>
-  <Button variant="outlined" color="secondary" disabled>Disabled</Button>
-<br/>
-Text Buttons<br/>
-  <Button variant="text" color="default">Default</Button>
-  <Button variant="text" color="primary">Primary</Button>
-  <Button variant="text" color="secondary">Secondary</Button>
-  <Button variant="text" color="secondary" disabled>Disabled</Button>
+  <MarginWrapper>
+    <Button variant='text' color='default'>Default</Button>
+    <Button variant='text' color='primary'>Primary</Button>
+    <Button variant='text' color='secondary'>Secondary</Button>
+    <Button variant='text' color='secondary' disabled>Disabled</Button>
+  </MarginWrapper>
 </Playground>
+
+## Raised Buttons
+<Playground>
+  <MarginWrapper>
+    <Button variant='raised' color='default' onClick={ () => alert('You clicked the default raised button') }>Default</Button>
+    <Button variant='raised' color='primary'>Primary</Button>
+    <Button variant='raised' color='secondary'>Secondary</Button>
+    <Button variant='raised' color='secondary' disabled>Disabled</Button>
+  </MarginWrapper>
+</Playground>
+
+
+## Flat Buttons
+<Playground>
+  <MarginWrapper>
+    <Button variant='flat' color='default'>Default</Button>
+    <Button variant='flat' color='primary'>Primary</Button>
+    <Button variant='flat' color='secondary'>Secondary</Button>
+    <Button variant='flat' color='secondary' disabled>Disabled</Button>
+  </MarginWrapper>
+</Playground>
+
+## Outlined Buttons
+<Playground>
+  <MarginWrapper>
+    <Button variant='outlined' color='default'>Default</Button>
+    <Button variant='outlined' color='primary'>Primary</Button>
+    <Button variant='outlined' color='secondary'>Secondary</Button>
+    <Button variant='outlined' color='secondary' disabled>Disabled</Button>
+  </MarginWrapper>
+</Playground>
+
+## Button Sizes
+<Playground>
+  <MarginWrapper>
+    <Button variant='flat' color='primary' size='small'>Small</Button>
+    <Button variant='flat' color='primary' size='medium'>Default</Button>
+    <Button variant='flat' color='primary' size='large'>Large</Button>
+    <Button variant='flat' color='primary' fullwidth>Full Width</Button>
+  </MarginWrapper>
+</Playground>
+
+## Props
+<PropsTable of={Button} />

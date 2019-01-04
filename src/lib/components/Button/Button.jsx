@@ -16,10 +16,37 @@ export class Button extends Component {
           return { main: grey[300], accent: grey[1000] }
       }
     }
+
+    const getSize = (size) => {
+      switch (size){
+        case 'large':
+          return { 
+            padding: '8px 32px',
+            height: '60px',
+            fontSize: '1.1rem'
+          }
+        case 'small': 
+          return { 
+            padding: '4px 8px',
+            height: '31px',
+            fontSize: '0.8rem'
+          }
+        case 'medium':
+        default:
+          return { 
+            padding: '6px 16px',
+            height: '36px',
+            fontSize: '1rem'
+          }
+      }
+    }
     const DefaultButton = styled.button`
-      font-size: 1em;
-      margin: 1em;
-      padding: 16px 28px;
+      font-size: ${props => getSize(this.props.size).fontSize};
+      white-space: nowrap;
+      width: ${props => this.props.fullwidth ? '100%': ''};
+      padding: ${props => getSize(this.props.size).padding};
+      min-width: 64px;
+      min-height: ${props => getSize(this.props.size).height};
       border-radius: 0;
       border: none;
       cursor: pointer;
@@ -27,6 +54,10 @@ export class Button extends Component {
         color: ${grey[300]};
         background: ${grey[100]};
         cursor: not-allowed;
+        &:hover {
+          color: ${grey[300]};
+          background: ${grey[100]};
+        }
       }
       &:hover {
         color: ${orange[500]};
@@ -58,14 +89,14 @@ export class Button extends Component {
 
     switch (this.props.variant) {
       case 'raised': 
-        return (<RaisedButton disabled={this.props.disabled}>{this.props.children}</RaisedButton>)
+        return (<RaisedButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</RaisedButton>)
       case 'flat': 
-        return (<FlatButton disabled={this.props.disabled}>{this.props.children}</FlatButton>)
+        return (<FlatButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</FlatButton>)
       case 'outlined':
-        return (<OutlinedButton disabled={this.props.disabled}>{this.props.children}</OutlinedButton>)
+        return (<OutlinedButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</OutlinedButton>)
       case 'text':
       default: 
-        return (<TextButton disabled={this.props.disabled}>{this.props.children}</TextButton>)
+        return (<TextButton disabled={this.props.disabled} onClick={ () => this.props.onClick() }>{this.props.children}</TextButton>)
     }
   }
 }
@@ -75,6 +106,10 @@ Button.propTypes = {
    * The content of the button.
    */
   children: PropTypes.node.isRequired,
+  /**
+   * The onClick function of the button.
+   */
+  onClick: PropTypes.node.onClick,
     /**
    * The variant of the button to use.
    */
@@ -84,6 +119,14 @@ Button.propTypes = {
    */
   color: PropTypes.oneOf(['default', 'primary', 'secondary']),
   /**
+   * The size of the button.
+   */
+  size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
+  /**
+   * If `true`, the button will be 100% width.
+   */
+  fullwidth: PropTypes.bool,
+  /**
    * If `true`, the button will be disabled.
    */
   disabled: PropTypes.bool
@@ -92,7 +135,9 @@ Button.propTypes = {
 Button.defaultProps = {
   color: 'default',
   disabled: false,
-  variant: 'text'
+  variant: 'text',
+  size: 'default',
+  fullwidth: false
 };
 
 
