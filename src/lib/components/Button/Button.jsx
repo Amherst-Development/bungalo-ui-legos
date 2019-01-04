@@ -40,7 +40,17 @@ export class Button extends Component {
           }
       }
     }
-    const { size, fullwidth } = this.props
+
+    const {
+      size,
+      fullwidth,
+      disabled,
+      color,
+      variant,
+      onClick,
+      children,
+    } = this.props
+
     const DefaultButton = styled.button`
       font-size: ${ getSize(size).fontSize };
       white-space: nowrap;
@@ -51,47 +61,58 @@ export class Button extends Component {
       border-radius: 0;
       border: none;
       cursor: pointer;
-      &:disabled {
-        color: ${ grey[300] };
-        background: ${ grey[100] };
-        cursor: not-allowed;
-        &:hover {
-          color: ${ grey[300] };
-          background: ${ grey[100] };
-        }
-      }
-      &:hover {
-        color: ${ orange[500] };
-        background: ${ orange[50] }
-      }
+      opacity: ${ disabled && '.65' };
+      cursor: ${ disabled && 'not-allowed' };
     `
-
-    const { color } = this.props
     const RaisedButton = styled(DefaultButton)`
       background: ${ getColor(color).main };
       color: ${ getColor(color).accent };
       box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+      &:hover {
+        color: ${ orange[500] };
+        background: ${ orange[50] };
+        &:disabled {
+          background: ${ getColor(color).main };
+          color: ${ getColor(color).accent };
+        }
+      }
     `
-
     const FlatButton = styled(DefaultButton)`
       background: ${ getColor(color).main };
       color: ${ getColor(color).accent };
+      &:hover {
+        color: ${ orange[500] };
+        background: ${ orange[50] };
+        &:disabled {
+          background: ${ getColor(color).main };
+          color: ${ getColor(color).accent };
+        }
+      }
     `
 
     const OutlinedButton = styled(DefaultButton)`
       background: transparent;
       color: ${ getColor(color).main };
       border: 1px solid ${ getColor(color).main };
+      &:hover {
+        background: ${ grey[100] };
+        &:disabled {
+          background: transparent;
+        }
+      }
     `
 
     const TextButton = styled(DefaultButton)`
       background: transparent;
       color: ${ getColor(color).main };
+      &:hover {
+        background: ${ grey[100] };
+        &:disabled {
+          background: transparent;
+        }
+      }
     `
 
-    const {
-      variant, disabled, onClick, children,
-    } = this.props
     switch (variant) {
       case 'raised':
         return (
