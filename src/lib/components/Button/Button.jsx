@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { grey, blue, orange } from '../../colors'
+import colors from '../../colors/colors.scss'
 
 export class Button extends Component {
   render() {
+    window.console.log('VARIABLES: ', colors)
     const getColor = (color) => {
       switch (color) {
         case 'primary':
-          return { main: blue[500], accent: grey[0] }
+          return { main: colors.blue, accent: colors.white }
         case 'secondary':
-          return { main: grey[700], accent: grey[0] }
+          return { main: colors.grey, accent: colors.white }
         case 'default':
         default:
-          return { main: grey[300], accent: grey[1000] }
+          return { main: colors.greyTint, accent: colors.black }
       }
     }
 
@@ -69,8 +70,8 @@ export class Button extends Component {
       color: ${ getColor(color).accent };
       box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
       &:hover {
-        color: ${ orange[500] };
-        background: ${ orange[50] };
+        color: ${ colors.orange };
+        background: ${ colors.apricot };
         &:disabled {
           background: ${ getColor(color).main };
           color: ${ getColor(color).accent };
@@ -81,8 +82,8 @@ export class Button extends Component {
       background: ${ getColor(color).main };
       color: ${ getColor(color).accent };
       &:hover {
-        color: ${ orange[500] };
-        background: ${ orange[50] };
+        color: ${ colors.orange };
+        background: ${ colors.apricot };
         &:disabled {
           background: ${ getColor(color).main };
           color: ${ getColor(color).accent };
@@ -95,7 +96,7 @@ export class Button extends Component {
       color: ${ getColor(color).main };
       border: 1px solid ${ getColor(color).main };
       &:hover {
-        background: ${ grey[100] };
+        background: ${ colors.greyTint };
         &:disabled {
           background: transparent;
         }
@@ -106,7 +107,7 @@ export class Button extends Component {
       background: transparent;
       color: ${ getColor(color).main };
       &:hover {
-        background: ${ grey[100] };
+        background: ${ colors.greyTint };
         &:disabled {
           background: transparent;
         }
