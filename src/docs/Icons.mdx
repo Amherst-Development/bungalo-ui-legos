@@ -1,0 +1,17 @@
+---
+name: Icons
+route: /icons
+---
+
+import { Playground, PropsTable } from 'docz'
+import colors from '../lib/colors/colors.scss'
+import { HeartIcon } from '../lib/components/Icons'
+
+# Icons
+Icons are found and edited inside `lib/components/Icons`
+
+<Playground>
+    <HeartIcon/>
+    <HeartIcon color={colors.red} />
+    <HeartIcon color={colors.blueberry} size='48px' />
+</Playground>

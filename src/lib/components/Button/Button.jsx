@@ -8,12 +8,17 @@ export class Button extends Component {
     const getColor = (color) => {
       switch (color) {
         case 'primary':
-          return { main: colors.blue, accent: colors.white }
+          return { main: colors.blue, accent: colors.white, hover: colors.blueberry }
         case 'secondary':
-          return { main: colors.grey, accent: colors.white }
+          return {
+            main: colors.grey,
+            accent: colors.white,
+            hover: colors.grey,
+            hoverText: colors.white,
+          }
         case 'default':
         default:
-          return { main: colors.greyTint, accent: colors.black }
+          return { main: colors.greyLight, accent: colors.black, hover: colors.greyTint }
       }
     }
 
@@ -48,6 +53,7 @@ export class Button extends Component {
       color,
       variant,
       onClick,
+      className,
       children,
     } = this.props
 
@@ -69,8 +75,7 @@ export class Button extends Component {
       color: ${ getColor(color).accent };
       box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
       &:hover {
-        color: ${ colors.orange };
-        background: ${ colors.apricot };
+        background: ${ getColor(color).hover };
         &:disabled {
           background: ${ getColor(color).main };
           color: ${ getColor(color).accent };
@@ -81,8 +86,7 @@ export class Button extends Component {
       background: ${ getColor(color).main };
       color: ${ getColor(color).accent };
       &:hover {
-        color: ${ colors.orange };
-        background: ${ colors.apricot };
+        background: ${ getColor(color).hover };
         &:disabled {
           background: ${ getColor(color).main };
           color: ${ getColor(color).accent };
@@ -116,26 +120,26 @@ export class Button extends Component {
     switch (variant) {
       case 'raised':
         return (
-          <RaisedButton disabled={ disabled } onClick={ () => onClick() }>
+          <RaisedButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
             {children}
           </RaisedButton>
         )
       case 'flat':
         return (
-          <FlatButton disabled={ disabled } onClick={ () => onClick() }>
+          <FlatButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
             {children}
           </FlatButton>
         )
       case 'outlined':
         return (
-          <OutlinedButton disabled={ disabled } onClick={ () => onClick() }>
+          <OutlinedButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
             {children}
           </OutlinedButton>
         )
       case 'text':
       default:
         return (
-          <TextButton disabled={ disabled } onClick={ () => onClick() }>
+          <TextButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
             {children}
           </TextButton>
         )
@@ -152,6 +156,10 @@ Button.propTypes = {
    * The onClick function of the button.
    */
   onClick: PropTypes.func,
+  /**
+   * The onClick function of the button.
+   */
+  className: PropTypes.string,
   /**
    * The variant of the button to use.
    */
@@ -181,6 +189,7 @@ Button.defaultProps = {
   size: 'default',
   fullwidth: false,
   onClick: () => {},
+  className: '',
 }
 
 
