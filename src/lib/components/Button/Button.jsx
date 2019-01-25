@@ -8,17 +8,27 @@ export class Button extends Component {
     const getColor = (color) => {
       switch (color) {
         case 'primary':
-          return { main: colors.blue, accent: colors.white, hover: colors.blueberry }
+          return {
+            main: colors.blue,
+            accent: colors.white,
+            hover: colors.blueberry,
+            hoverText: colors.white,
+          }
         case 'secondary':
           return {
             main: colors.grey,
             accent: colors.white,
-            hover: colors.grey,
+            hover: colors.black,
             hoverText: colors.white,
           }
         case 'default':
         default:
-          return { main: colors.greyLight, accent: colors.black, hover: colors.greyTint }
+          return {
+            main: colors.black,
+            accent: colors.greyTint,
+            hover: colors.grey,
+            hoverText: colors.greyLight,
+          }
       }
     }
 
@@ -69,6 +79,7 @@ export class Button extends Component {
       cursor: pointer;
       opacity: ${ disabled && '.65' };
       cursor: ${ disabled && 'not-allowed' };
+      transition: all 0.3s ease;
     `
     const RaisedButton = styled(DefaultButton)`
       background: ${ getColor(color).main };
@@ -99,8 +110,10 @@ export class Button extends Component {
       color: ${ getColor(color).main };
       border: 1px solid ${ getColor(color).main };
       &:hover {
-        background: ${ colors.greyTint };
+        color: ${ getColor(color).hoverText };
+        background: ${ getColor(color).main };
         &:disabled {
+          color: ${ getColor(color).main };
           background: transparent;
         }
       }
@@ -110,8 +123,10 @@ export class Button extends Component {
       background: transparent;
       color: ${ getColor(color).main };
       &:hover {
-        background: ${ colors.greyTint };
+        color: ${ getColor(color).hoverText };
+        background: ${ getColor(color).main };
         &:disabled {
+          color: ${ getColor(color).main };
           background: transparent;
         }
       }
