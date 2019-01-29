@@ -5,6 +5,12 @@ import colors from '../../styles/colors/colors.scss'
 import '../../styles/fonts/fonts.scss'
 
 export class Button extends Component {
+  clicky = (e) => {
+    const { onClick } = this.props
+    onClick()
+    e.stopPropagation()
+  }
+
   render() {
     const getColor = (color) => {
       switch (color) {
@@ -67,7 +73,7 @@ export class Button extends Component {
       className,
       children,
     } = this.props
-
+  
     const DefaultButton = styled.button`
       font-family: 'Graphik-Regular';
       font-size: ${ getSize(size).fontSize };
@@ -137,26 +143,26 @@ export class Button extends Component {
     switch (variant) {
       case 'raised':
         return (
-          <RaisedButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
+          <RaisedButton disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </RaisedButton>
         )
       case 'flat':
         return (
-          <FlatButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
+          <FlatButton disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </FlatButton>
         )
       case 'outlined':
         return (
-          <OutlinedButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
+          <OutlinedButton disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </OutlinedButton>
         )
       case 'text':
       default:
         return (
-          <TextButton disabled={ disabled } onClick={ () => onClick() } className={ className }>
+          <TextButton disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </TextButton>
         )

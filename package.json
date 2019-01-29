@@ -74,7 +74,7 @@
   },
   "scripts": {
     "start": "scripts/start.js",
-    "lib": "babel src/lib --out-dir lib --copy-files",
+    "lib": "rm -rf lib && babel src/lib --out-dir lib --copy-files",
     "test": "node scripts/test.js",
     "docz:dev": "docz dev",
     "docz:build": "docz build"
