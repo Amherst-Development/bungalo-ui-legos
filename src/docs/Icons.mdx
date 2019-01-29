@@ -5,15 +5,24 @@ route: /icons
 
 import { Playground, PropsTable } from 'docz'
 import colors from '../lib/colors/colors.scss'
-import { HeartIcon } from '../lib/components/Icons'
+import { 
+  AddressIcon, 
+  BedBathIcon, 
+  HeartIcon, 
+  HeartFilledIcon, 
+  SqftIcon,
+} from '../lib/components/Icons'
 
 # Icons
 Icons are found and edited inside `lib/components/Icons`
 
 <Playground>
-    <HeartIcon style={{background: "#333", padding: "16px" }}/>
-    <HeartIcon color={colors.red} />
-    <HeartIcon color={colors.blueberry} size='48px' />
+    <AddressIcon color={colors.grey} size='48px'/>
+    <BedBathIcon color={colors.grey} size='48px'/>
+    <HeartIcon color={colors.grey} size='48px'/>
+    <HeartFilledIcon color={colors.grey} size='48px'/>
+    <SqftIcon color={colors.grey} size='48px'/>
+
 </Playground>
 
 ## Props
