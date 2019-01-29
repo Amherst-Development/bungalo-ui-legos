@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import colors from '../../colors/colors.scss'
+import colors from '../../styles/colors/colors.scss'
+import '../../styles/fonts/fonts.scss'
 
 export class Button extends Component {
   render() {
@@ -36,8 +37,8 @@ export class Button extends Component {
       switch (size) {
         case 'large':
           return {
-            padding: '8px 32px',
-            height: '60px',
+            padding: '12px 32px',
+            height: '55px',
             fontSize: '1.1rem',
           }
         case 'small':
@@ -68,6 +69,7 @@ export class Button extends Component {
     } = this.props
 
     const DefaultButton = styled.button`
+      font-family: 'Graphik-Regular';
       font-size: ${ getSize(size).fontSize };
       white-space: nowrap;
       width: ${ fullwidth ? '100%' : '' };

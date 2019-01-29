@@ -1,0 +1,36 @@
+// variables.scss
+$color-white: #FFFFFF;
+$color-black: #282A29;
+$color-orange: #E35F2E;
+$color-red: #FF5516;
+$color-grey: #5E605F;
+$color-grey-tint: #EBEBEB;
+$color-grey-light: #FCFCFC;
+$color-blue: #7FCAF6;
+$color-blue-tint: #DDEDF2;
+$color-brass: #B5936B;
+$color-brass-tint: #F1EBD9;
+$color-lemon: #F9E547;
+$color-lemon-tint: #FDF9ED;
+$color-apricot: #EDA146;
+$color-blueberry: #004976;
+// the :export directive is the magic sauce for webpack
+// these will throw an error in the linter until the next version is released:
+// https://github.com/Microsoft/vscode-css-languageservice/pull/137
+:export {
+    white: $color-white;
+    black: $color-black;
+    orange: $color-orange;
+    red: $color-red;
+    grey: $color-grey;
+    greyTint: $color-grey-tint;
+    greyLight: $color-grey-light;
+    blue: $color-blue;
+    blueTint: $color-blue-tint;
+    brass: $color-brass;
+    brassTint: $color-brass-tint;
+    lemon: $color-lemon;
+    lemonTint: $color-lemon-tint;
+    apricot: $color-apricot;
+    blueberry: $color-blueberry;    
+}

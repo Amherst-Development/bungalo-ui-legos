@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import colors from '../../colors/colors.scss'
+import colors from '../../styles/colors/colors.scss'
 
 const HeartIcon = (props) => {
   const {
