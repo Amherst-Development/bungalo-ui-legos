@@ -41,11 +41,17 @@ export class Button extends Component {
 
     const getSize = (size) => {
       switch (size) {
-        case 'large':
+        case 'extra-large':
           return {
             padding: '12px 32px',
             height: '55px',
             fontSize: '1.1rem',
+          }
+        case 'large':
+          return {
+            padding: '12px 24px',
+            height: '45px',
+            fontSize: '1rem',
           }
         case 'small':
           return {
@@ -69,7 +75,6 @@ export class Button extends Component {
       disabled,
       color,
       variant,
-      onClick,
       className,
       children,
     } = this.props
@@ -194,7 +199,7 @@ Button.propTypes = {
   /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['default', 'small', 'medium', 'large', 'extra-large']),
   /**
    * If `true`, the button will be 100% width.
    */
