@@ -21,7 +21,7 @@ const ArrowLeftIcon = (props) => {
       <g fill='none' fillRule='evenodd'>
         <title id='title'>ArrowLeft</title>
         <polygon points='0 0 18 0 18 18 0 18' />
-        <polygon fill={ color } stroke={ color } strokeWidth='.3' points='5.85 2 5 2.832 11.413 9.11 5 15.168 5.85 16 13 9.11' transform='matrix(-1 0 0 1 18 0)' />
+        <polygon fill={ color } stroke={ color } strokeWidth='1' points='5.85 2 5 2.832 11.413 9.11 5 15.168 5.85 16 13 9.11' transform='matrix(-1 0 0 1 18 0)' />
       </g>
     </svg>
   )
