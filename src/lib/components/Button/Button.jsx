@@ -28,6 +28,13 @@ export class Button extends Component {
             hover: colors.black,
             hoverText: colors.white,
           }
+        case 'tertiary':
+          return {
+            main: colors.apricot,
+            accent: colors.white,
+            hover: colors.orange,
+            hoverText: colors.white,
+          }
         case 'default':
         default:
           return {
@@ -195,7 +202,7 @@ Button.propTypes = {
   /**
    * The colors of the button.
    */
-  color: PropTypes.oneOf(['default', 'primary', 'secondary']),
+  color: PropTypes.oneOf(['default', 'primary', 'secondary', 'tertiary']),
   /**
    * The size of the button.
    */
