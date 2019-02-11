@@ -50,14 +50,14 @@ export class Button extends Component {
       switch (size) {
         case 'extra-large':
           return {
-            padding: '16px 40px',
+            padding: '16px 24px',
             height: '55px',
             fontSize: '16px',
             lineHeight: '16px',
           }
         case 'large':
           return {
-            padding: '14px 32px',
+            padding: '14px 24px',
             height: '50px',
             fontSize: '15px',
             lineHeight: '15px',
