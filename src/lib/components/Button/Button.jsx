@@ -50,15 +50,15 @@ export class Button extends Component {
       switch (size) {
         case 'extra-large':
           return {
-            padding: '16px 32px',
-            height: '55px',
+            padding: '16px 40px',
+            height: '60px',
             fontSize: '16px',
             lineHeight: '16px',
           }
         case 'large':
           return {
-            padding: '14px 32px',
-            height: '50px',
+            padding: '14px 40px',
+            height: '55px',
             fontSize: '15px',
             lineHeight: '15px',
           }
@@ -72,8 +72,8 @@ export class Button extends Component {
         case 'medium':
         default:
           return {
-            padding: '11px 30px',
-            height: '40px',
+            padding: '14px 30px',
+            height: '45px',
             lineHeight: '14px',
             fontSize: '14px',
           }
@@ -95,6 +95,7 @@ export class Button extends Component {
       font-size: ${ getSize(size).fontSize };
       line-height: ${ getSize(size).lineHeight };
       white-space: nowrap;
+      letter-spacing: -0.2px;
       width: ${ fullwidth ? '100%' : '' };
       padding: ${ getSize(size).padding };
       min-width: 64px;
