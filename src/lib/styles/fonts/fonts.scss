@@ -18,7 +18,7 @@
 // Used for leading paragraphs and non-leading paragraphs
 @font-face {
   font-family: 'Graphik-Medium';
-  font-weight: 600;
+  font-weight: normal !important;
   src:
     url('../fonts/Graphik-Medium-Web.woff2') format("woff2"),
     url('../fonts/Graphik-Medium-Web.woff') format("woff"),
