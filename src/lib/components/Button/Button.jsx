@@ -50,28 +50,32 @@ export class Button extends Component {
       switch (size) {
         case 'extra-large':
           return {
-            padding: '12px 32px',
+            padding: '16px 40px',
             height: '55px',
-            fontSize: '1.1rem',
+            fontSize: '16px',
+            lineHeight: '16px',
           }
         case 'large':
           return {
-            padding: '12px 24px',
-            height: '45px',
-            fontSize: '1rem',
+            padding: '14px 32px',
+            height: '50px',
+            fontSize: '15px',
+            lineHeight: '15px',
           }
         case 'small':
           return {
-            padding: '4px 8px',
-            height: '31px',
-            fontSize: '0.8rem',
+            padding: '8px 16px',
+            height: '35px',
+            fontSize: '13px',
+            lineHeight: '13px',
           }
         case 'medium':
         default:
           return {
-            padding: '6px 16px',
-            height: '36px',
-            fontSize: '1rem',
+            padding: '14px 30px',
+            height: '45px',
+            lineHeight: '14px',
+            fontSize: '14px',
           }
       }
     }
@@ -87,9 +91,12 @@ export class Button extends Component {
     } = this.props
   
     const DefaultButton = styled.button`
-      font-family: 'Graphik-Regular';
+      font-family: 'Graphik-Medium';
       font-size: ${ getSize(size).fontSize };
+      line-height: ${ getSize(size).lineHeight };
       white-space: nowrap;
+      font-weight: normal;
+      letter-spacing: -0.2px;
       width: ${ fullwidth ? '100%' : '' };
       padding: ${ getSize(size).padding };
       min-width: 64px;
@@ -104,7 +111,8 @@ export class Button extends Component {
     const RaisedButton = styled(DefaultButton)`
       background: ${ getColor(color).main };
       color: ${ getColor(color).accent };
-      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+      border-radius: 1px;
       &:hover {
         background: ${ getColor(color).hover };
         &:disabled {
