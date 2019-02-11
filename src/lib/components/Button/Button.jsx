@@ -72,7 +72,7 @@ export class Button extends Component {
         case 'medium':
         default:
           return {
-            padding: '14px 30px',
+            padding: '14px 24px',
             height: '45px',
             lineHeight: '14px',
             fontSize: '14px',
