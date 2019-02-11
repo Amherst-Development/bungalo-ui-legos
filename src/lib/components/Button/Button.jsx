@@ -98,6 +98,7 @@ export class Button extends Component {
       font-weight: normal;
       letter-spacing: -0.2px;
       width: ${ fullwidth ? '100%' : '' };
+      margin: 0;
       padding: ${ getSize(size).padding };
       min-width: 64px;
       min-height: ${ getSize(size).height };
