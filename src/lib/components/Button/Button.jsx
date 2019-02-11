@@ -95,6 +95,7 @@ export class Button extends Component {
       font-size: ${ getSize(size).fontSize };
       line-height: ${ getSize(size).lineHeight };
       white-space: nowrap;
+      font-weight: normal;
       letter-spacing: -0.2px;
       width: ${ fullwidth ? '100%' : '' };
       padding: ${ getSize(size).padding };
