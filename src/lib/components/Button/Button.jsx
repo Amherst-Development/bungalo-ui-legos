@@ -50,28 +50,28 @@ export class Button extends Component {
       switch (size) {
         case 'extra-large':
           return {
-            padding: '12px 32px',
+            padding: '16px 32px',
             height: '55px',
             fontSize: '1.1rem',
           }
         case 'large':
           return {
-            padding: '12px 24px',
+            padding: '14px 32px',
             height: '45px',
             fontSize: '1rem',
           }
         case 'small':
           return {
-            padding: '4px 8px',
-            height: '31px',
-            fontSize: '0.8rem',
+            padding: '8px 16px',
+            height: '30px',
+            fontSize: '0.75rem',
           }
         case 'medium':
         default:
           return {
-            padding: '6px 16px',
-            height: '36px',
-            fontSize: '1rem',
+            padding: '12px 24px',
+            height: '35px',
+            fontSize: '0.875rem',
           }
       }
     }
@@ -87,7 +87,7 @@ export class Button extends Component {
     } = this.props
   
     const DefaultButton = styled.button`
-      font-family: 'Graphik-Regular';
+      font-family: 'Graphik-Medium';
       font-size: ${ getSize(size).fontSize };
       white-space: nowrap;
       width: ${ fullwidth ? '100%' : '' };
