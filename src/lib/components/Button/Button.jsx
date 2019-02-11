@@ -107,7 +107,7 @@ export class Button extends Component {
       cursor: pointer;
       opacity: ${ disabled && '.65' };
       cursor: ${ disabled && 'not-allowed' };
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
     `
     const RaisedButton = styled(DefaultButton)`
       background: ${ getColor(color).main };
