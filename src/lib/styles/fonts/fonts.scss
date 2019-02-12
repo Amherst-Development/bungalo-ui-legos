@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Lyon Display Medium';
+  font-weight: 600;
+  src:
+    url('../fonts/LyonDisplay-Medium-Web.woff2') format("woff2"),
+    url('../fonts/LyonDisplay-Medium-Web.woff') format("woff"),
+}
+
+// Used for h4
+@font-face {
+  font-family: 'Graphik-Regular';
+  font-weight: normal !important;
+  src:
+    url('../fonts/Graphik-Regular-Web.woff2') format("woff2"),
+    url('../fonts/Graphik-Regular-Web.woff') format("woff"),
+}
+
+// Used for leading paragraphs and non-leading paragraphs
+@font-face {
+  font-family: 'Graphik-Medium';
+  font-weight: normal !important;
+  src:
+    url('../fonts/Graphik-Medium-Web.woff2') format("woff2"),
+    url('../fonts/Graphik-Medium-Web.woff') format("woff"),
+}
