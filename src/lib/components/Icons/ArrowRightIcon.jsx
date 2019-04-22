@@ -19,7 +19,7 @@ const ArrowRightIcon = (props) => {
       xmlns='http://www.w3.org/2000/svg'
     >
       <g fill='none' fillRule='evenodd'>
-        <title id='title'>ArrowRight</title>
+        <title id='title'>Arrow Right</title>
         <polygon points='0 0 18 0 18 18 0 18' />
         <polygon fill={ color } stroke={ color } strokeWidth='1' points='6.85 2 6 2.832 12.413 9.11 6 15.168 6.85 16 14 9.11' />
       </g>
