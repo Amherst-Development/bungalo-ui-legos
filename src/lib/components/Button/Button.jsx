@@ -30,7 +30,7 @@ export class Button extends Component {
           }
         case 'tertiary':
           return {
-            main: colors.apricot,
+            main: colors.tangerine,
             accent: colors.white,
             hover: colors.orange,
             hoverText: colors.white,
