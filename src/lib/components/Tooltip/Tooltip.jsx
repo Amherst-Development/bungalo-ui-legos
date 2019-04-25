@@ -145,7 +145,7 @@ const Tooltip = ((props) => {
 
   return (
     <div
-      className={ `tooltip ${ className } active ${ active ? ' active' : '' }` }
+      className={ `tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
       onFocus={ handleFocus }
