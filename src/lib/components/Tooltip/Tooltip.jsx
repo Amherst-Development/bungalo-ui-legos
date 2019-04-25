@@ -83,9 +83,9 @@ const TooltipMessage = styled.div`
       }
   }
   &.tooltip-bottom-left {
-    bottom: 0;
-    left: -${ arrowSize }px;
-    transform: translate(-76%,120%);
+    bottom: -${ arrowSize / 2 }px;
+    right: -${ arrowSize }px;
+    transform: translateY(100%);
     &:after {
         top: -${ arrowSize * 2 }px;
         right: ${ arrowSize }px;
@@ -93,9 +93,9 @@ const TooltipMessage = styled.div`
     }
   }
   &.tooltip-bottom-right {
-    bottom: 0;
-    right: -${ arrowSize }px;
-    transform: translate(77%,120%);
+    bottom: -${ arrowSize / 2 }px;
+    left: -${ arrowSize }px;
+    transform: translateY(100%);
     &:after {
         top: -${ arrowSize * 2 }px;
         left: ${ arrowSize * 2 }px;
@@ -103,9 +103,9 @@ const TooltipMessage = styled.div`
     }
   }
   &.tooltip-top-left {
-    top: 0;
-    left: -${ arrowSize }px;
-    transform: translate(-72%,-120%);
+    top: -${ arrowSize }px;
+    right: -${ arrowSize }px;
+    transform: translateY(-100%);
     &:after {
         top: 100%;
         right: ${ arrowSize }px;
@@ -113,9 +113,9 @@ const TooltipMessage = styled.div`
     }
   }
   &.tooltip-top-right {
-    top: 0;
-    right: -${ arrowSize }px;
-    transform: translate(74%,-120%);
+    top: -${ arrowSize / 2 }px;
+    left: -${ arrowSize }px;
+    transform: translateY(-100%);
     &:after {
         top: 100%;
         left: ${ arrowSize * 2 }px;
