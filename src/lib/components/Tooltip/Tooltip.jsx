@@ -19,6 +19,7 @@ const TooltipMessage = styled.div`
   border: 1px solid ${ colors.blackTint };
   transition: all .25s;
   display: none;
+  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.21);
   p {
       font-family: Graphik-Regular;
       padding: 12px;
@@ -84,7 +85,7 @@ const TooltipMessage = styled.div`
   }
   &.tooltip-bottom-left {
     bottom: -${ arrowSize / 2 }px;
-    right: -${ arrowSize }px;
+    right: -${ arrowSize / 2 }px;
     transform: translateY(100%);
     &:after {
         top: -${ arrowSize * 2 }px;
@@ -94,7 +95,7 @@ const TooltipMessage = styled.div`
   }
   &.tooltip-bottom-right {
     bottom: -${ arrowSize / 2 }px;
-    left: -${ arrowSize }px;
+    left: -${ arrowSize / 2 }px;
     transform: translateY(100%);
     &:after {
         top: -${ arrowSize * 2 }px;
@@ -104,7 +105,7 @@ const TooltipMessage = styled.div`
   }
   &.tooltip-top-left {
     top: -${ arrowSize }px;
-    right: -${ arrowSize }px;
+    right: -${ arrowSize / 2 }px;
     transform: translateY(-100%);
     &:after {
         top: 100%;
@@ -114,7 +115,7 @@ const TooltipMessage = styled.div`
   }
   &.tooltip-top-right {
     top: -${ arrowSize / 2 }px;
-    left: -${ arrowSize }px;
+    left: -${ arrowSize / 2 }px;
     transform: translateY(-100%);
     &:after {
         top: 100%;
