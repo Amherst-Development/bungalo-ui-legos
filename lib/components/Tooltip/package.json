@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "tooltip",
+  "main": "./Tooltip.js"
+}
