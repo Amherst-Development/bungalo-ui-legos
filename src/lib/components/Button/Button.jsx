@@ -23,7 +23,7 @@ export class Button extends Component {
           }
         case 'secondary':
           return {
-            main: colors.grey,
+            main: colors.blackTint,
             accent: colors.white,
             hover: colors.black,
             hoverText: colors.white,
@@ -89,7 +89,7 @@ export class Button extends Component {
       className,
       children,
     } = this.props
-  
+
     const DefaultButton = styled.button`
       font-family: 'Graphik-Medium';
       font-size: ${ getSize(size).fontSize };
