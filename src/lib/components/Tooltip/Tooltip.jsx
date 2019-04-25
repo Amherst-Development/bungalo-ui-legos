@@ -176,6 +176,7 @@ export default styled(Tooltip)`
 
   &.active {
     .tooltip-container {
+        z-index: 300;
         display: block;
     }
   }
