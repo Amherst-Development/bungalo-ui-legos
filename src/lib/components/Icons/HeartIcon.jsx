@@ -34,7 +34,7 @@ HeartIcon.propTypes = {
 }
 
 HeartIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey900,
   size: '18px',
   style: {},
   className: '',
