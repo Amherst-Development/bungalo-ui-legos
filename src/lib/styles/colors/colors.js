@@ -57,9 +57,9 @@ const colors = {
   yellow600: '#dfcd3f',
   yellow500: '#f9e547',
   yellow400: '#faeb72',
-  yellow300: '#faeb72',
-  yellow200: '#faeb72',
-  yellow100: '#faeb72',
+  yellow300: '#fcf2a3',
+  yellow200: '#fdf6c0',
+  yellow100: '#fdf6c0',
 
   brown900: '#907555',
   brown800: '#9a7d5b',
