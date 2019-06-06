@@ -34,7 +34,7 @@ ArrowDownIcon.propTypes = {
 }
 
 ArrowDownIcon.defaultProps = {
-  color: colors.grey900,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',
