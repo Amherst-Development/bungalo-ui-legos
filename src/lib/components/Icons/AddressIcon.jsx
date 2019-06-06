@@ -9,7 +9,6 @@ const AddressIcon = (props) => {
 
   return (
     <svg
-      id='address-icon'
       width={ size }
       height={ size }
       style={ style }

@@ -9,7 +9,6 @@ const SqftIcon = (props) => {
 
   return (
     <svg
-      id='sqft-icon'
       width={ size }
       height={ size }
       style={ style }

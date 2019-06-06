@@ -9,7 +9,6 @@ const BellIcon = (props) => {
 
   return (
     <svg
-      id='bell-icon'
       width={ size }
       height={ size }
       style={ style }

@@ -9,7 +9,6 @@ const ArrowRightIcon = (props) => {
 
   return (
     <svg
-      id='arrow-right-icon'
       width={ size }
       height={ size }
       style={ style }

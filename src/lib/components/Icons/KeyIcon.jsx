@@ -9,7 +9,6 @@ const KeyIcon = (props) => {
 
   return (
     <svg
-      id='key-icon'
       width={ size }
       height={ size }
       style={ style }

@@ -9,7 +9,6 @@ const HeartIcon = (props) => {
 
   return (
     <svg
-      id='heart-icon'
       width={ size }
       height={ size }
       style={ style }

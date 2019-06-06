@@ -9,7 +9,6 @@ const BedBathIcon = (props) => {
 
   return (
     <svg
-      id='bed-bath-icon'
       width={ size }
       height={ size }
       style={ style }

@@ -9,7 +9,6 @@ const CloseIcon = (props) => {
 
   return (
     <svg
-      id='close-icon'
       width={ size }
       height={ size }
       style={ style }

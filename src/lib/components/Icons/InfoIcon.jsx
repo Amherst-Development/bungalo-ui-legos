@@ -9,7 +9,6 @@ const InfoIcon = (props) => {
 
   return (
     <svg
-      id='info-icon'
       width={ size }
       height={ size }
       style={ style }
