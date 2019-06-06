@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import colors from '../lib/styles/colors/colors.scss'
+import colors from '../lib/styles/colors/colors'
 
 
 export default class ColorSwatch extends Component {
