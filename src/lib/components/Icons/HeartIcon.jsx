@@ -9,7 +9,6 @@ const HeartIcon = (props) => {
 
   return (
     <svg
-      id='heart-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ HeartIcon.propTypes = {
 }
 
 HeartIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

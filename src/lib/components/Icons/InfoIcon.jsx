@@ -9,7 +9,6 @@ const InfoIcon = (props) => {
 
   return (
     <svg
-      id='info-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ InfoIcon.propTypes = {
 }
 
 InfoIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

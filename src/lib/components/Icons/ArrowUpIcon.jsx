@@ -9,7 +9,6 @@ const ArrowUpIcon = (props) => {
 
   return (
     <svg
-      id='arrow-up-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ ArrowUpIcon.propTypes = {
 }
 
 ArrowUpIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

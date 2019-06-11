@@ -9,7 +9,6 @@ const CloseIcon = (props) => {
 
   return (
     <svg
-      id='close-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ CloseIcon.propTypes = {
 }
 
 CloseIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

@@ -9,7 +9,6 @@ const BellIcon = (props) => {
 
   return (
     <svg
-      id='bell-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ BellIcon.propTypes = {
 }
 
 BellIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

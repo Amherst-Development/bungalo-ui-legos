@@ -9,7 +9,6 @@ const BedBathIcon = (props) => {
 
   return (
     <svg
-      id='bed-bath-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ BedBathIcon.propTypes = {
 }
 
 BedBathIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

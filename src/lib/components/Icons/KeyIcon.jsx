@@ -9,7 +9,6 @@ const KeyIcon = (props) => {
 
   return (
     <svg
-      id='key-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ KeyIcon.propTypes = {
 }
 
 KeyIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

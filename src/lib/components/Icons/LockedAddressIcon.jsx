@@ -9,7 +9,6 @@ const LockedAddressIcon = (props) => {
 
   return (
     <svg
-      id='locked-address-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ LockedAddressIcon.propTypes = {
 }
 
 LockedAddressIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

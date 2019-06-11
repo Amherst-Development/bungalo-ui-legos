@@ -9,7 +9,6 @@ const CheckmarkIcon = (props) => {
 
   return (
     <svg
-      id='checkmark-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ CheckmarkIcon.propTypes = {
 }
 
 CheckmarkIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

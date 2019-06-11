@@ -1,4 +1,98 @@
+// Current colors: 
+$color-grey-1000: #000000;
+$color-grey-900: #414242;
+$color-grey-800: #4d4f4e;
+$color-grey-700: #5D605F;
+$color-grey-600: #A6A6A6;
+$color-grey-500: #BDBCBE;
+$color-grey-400: #d6d6d6;
+$color-grey-300: #EBEBEB;
+$color-grey-200: #f4f4f4;
+$color-grey-100: #fcfcfc;
+$color-grey-0: #FFFFFF;
+
+$color-orange-900: #c88532;
+$color-orange-800: #d58e35;
+$color-orange-700: #e19538;
+$color-orange-600: #ee9e3b;
+$color-orange-500: #fba73f;
+$color-orange-400: #fcbd6c;
+$color-orange-300: #fdd39f;
+$color-orange-200: #fde3bd;
+$color-orange-100: #fef6ec;
+
+$color-blue-900: #65a1c4;
+$color-blue-800: #6cabd1;
+$color-blue-700: #72b5dc;
+$color-blue-600: #78bfe9;
+$color-blue-500: #7fcaf6;
+$color-blue-400: #9fd7f5;
+$color-blue-300: #bfe4fa;
+$color-blue-200: #d8eef4;
+$color-blue-100: #f2f9fe;
+
+$color-creme-900: #c1b9ad;
+$color-creme-800: #cdc5b8;
+$color-creme-700: #d9d0c2;
+$color-creme-600: #e5dccd;
+$color-creme-500: #f2e8d9;
+$color-creme-400: #f5eddf;
+$color-creme-300: #f8f3ec;
+$color-creme-200: #fbf7eb;
+$color-creme-100: #fdfcfb;
+
+$color-green-900: #88ac80;
+$color-green-800: #90b788;
+$color-green-700: #98c18f;
+$color-green-600: #a1cc97;
+$color-green-500: #aad8a0;
+$color-green-400: #bfe1b4;
+$color-green-300: #d4ebcf;
+$color-green-200: #EDF6ED;
+$color-green-100: #f6fbf5;
+
+$color-yellow-900: #c7b738;
+$color-yellow-800: #d3c23c;
+$color-yellow-700: #dfcd3f;
+$color-yellow-600: #dfcd3f;
+$color-yellow-500: #f9e547;
+$color-yellow-400: #faeb72;
+$color-yellow-300: #fcf2a3;
+$color-yellow-200: #fdf6c0;
+$color-yellow-100: #fefcec;
+
+$color-brown-900: #907555;
+$color-brown-800: #9a7d5b;
+$color-brown-700: #a28460;
+$color-brown-600: #ab8b65;
+$color-brown-500: #b5936b;
+$color-brown-400: #c7ae8d;
+$color-brown-300: #dac9b5;
+$color-brown-200: #e8ddca;
+$color-brown-100: #f7f4f0;
+
+$color-dark-orange-900: #b44c24;
+$color-dark-orange-800: #c05127;
+$color-dark-orange-700: #ca5629;
+$color-dark-orange-600: #d65b2b;
+$color-dark-orange-500: #e2602e;
+$color-dark-orange-400: #e9875f;
+$color-dark-orange-300: #f0af96;
+$color-dark-orange-200: #f6ceb8;
+$color-dark-orange-100: #fcefea;
+
+$color-dark-blue-900: #003961;
+$color-dark-blue-800: #003d67;
+$color-dark-blue-700: #00406d;
+$color-dark-blue-600: #004473;
+$color-dark-blue-500: #00487a;
+$color-dark-blue-400: #407598;
+$color-dark-blue-300: #80a3bc;
+$color-dark-blue-200: #b3c7cf;
+$color-dark-blue-100: #e6edf1;
+
 // variables.scss
+// TODO Depricate Old Colors
 $color-tangerine: #FBA73F;
 $color-blue: #7FCAF6;
 $color-blue-tint: #D9EFF4;
@@ -22,31 +116,3 @@ $color-grey: #BDBCBE;
 $color-grey-tint: #EBEBEB;
 $color-grey-light: #FAFAFA;
 $color-white: #FFFFFF;
-// the :export directive is the magic sauce for webpack
-// these will throw an error in the linter until the next version is released:
-// https://github.com/Microsoft/vscode-css-languageservice/pull/137
-:export {
-    tangerine: $color-tangerine;
-    blue: $color-blue;
-    blueTint: $color-blue-tint;
-    blueLight: $color-blue-light;
-    creme: $color-creme;
-    cremeTint: $color-creme-tint;
-    cremeLight: $color-creme-light;
-    orange: $color-orange;
-    red: $color-red;
-    brass: $color-brass;
-    brassTint: $color-brass-tint;
-    lemon: $color-lemon;
-    lemonTint: $color-lemon-tint;
-    lime: $color-lime;
-    limeTint: $color-lime-tint;
-    blueberry: $color-blueberry;
-    black: $color-black;
-    blackTint: $color-black-tint;
-    blackLight: $color-black-light;
-    grey: $color-grey;
-    greyTint: $color-grey-tint;
-    greyLight: $color-grey-light;
-    white: $color-white;   
-}

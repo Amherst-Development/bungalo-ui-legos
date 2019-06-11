@@ -9,7 +9,6 @@ const ArrowRightIcon = (props) => {
 
   return (
     <svg
-      id='arrow-right-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ ArrowRightIcon.propTypes = {
 }
 
 ArrowRightIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

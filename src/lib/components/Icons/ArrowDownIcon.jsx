@@ -9,7 +9,6 @@ const ArrowDownIcon = (props) => {
 
   return (
     <svg
-      id='arrow-down-icon'
       width={ size }
       height={ size }
       style={ style }
@@ -35,7 +34,7 @@ ArrowDownIcon.propTypes = {
 }
 
 ArrowDownIcon.defaultProps = {
-  color: colors.white,
+  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',
