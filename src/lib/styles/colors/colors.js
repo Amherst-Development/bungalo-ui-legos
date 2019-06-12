@@ -29,7 +29,7 @@ const colors = {
   blue400: '#9fd7f5',
   blue300: '#bfe4fa',
   blue200: '#d8eef4',
-  blue100: '#f2f9fe',
+  blue100: '#f6fbfe',
 
   creme900: '#c1b9ad',
   creme800: '#cdc5b8',
