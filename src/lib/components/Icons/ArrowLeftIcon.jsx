@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import colors from '../../styles/colors/colors'
 
 const ArrowLeftIcon = (props) => {
   const {
-    color, size, style, className,
+    size, style, className,
   } = props
 
   return (
@@ -20,21 +19,19 @@ const ArrowLeftIcon = (props) => {
       <g fill='none' fillRule='evenodd'>
         <title id='title'>Arrow Left</title>
         <polygon points='0 0 18 0 18 18 0 18' />
-        <polygon fill={ color } stroke={ color } strokeWidth='1' points='5.85 2 5 2.832 11.413 9.11 5 15.168 5.85 16 13 9.11' transform='matrix(-1 0 0 1 18 0)' />
+        <polygon fill='currentColor' stroke='currentColor' strokeWidth='1' points='5.85 2 5 2.832 11.413 9.11 5 15.168 5.85 16 13 9.11' transform='matrix(-1 0 0 1 18 0)' />
       </g>
     </svg>
   )
 }
 
 ArrowLeftIcon.propTypes = {
-  color: PropTypes.string,
   size: PropTypes.string,
   style: PropTypes.object,
   className: PropTypes.string,
 }
 
 ArrowLeftIcon.defaultProps = {
-  color: colors.grey0,
   size: '18px',
   style: {},
   className: '',

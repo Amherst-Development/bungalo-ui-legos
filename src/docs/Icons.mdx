@@ -4,7 +4,7 @@ route: /icons
 ---
 
 import { Playground, PropsTable } from 'docz'
-import colors from '../lib/styles/colors/colors.scss'
+import colors from '../../lib/styles/colors/colors.js'
 import { 
     AddressIcon, 
     ArrowDownIcon,
@@ -27,22 +27,23 @@ import {
 Icons are found and edited inside `lib/components/Icons`
 
 <Playground>
-    <AddressIcon color={colors.grey} size='48px'/>
-    <ArrowDownIcon color={colors.grey} size='48px'/>
-    <ArrowLeftIcon color={colors.grey} size='48px'/>
-    <ArrowRightIcon color={colors.grey} size='48px'/>
-    <ArrowUpIcon color={colors.grey} size='48px'/>
-    <BedBathIcon color={colors.grey} size='48px'/>
-    <BellIcon color={colors.grey} size='48px'/>
-    <CheckmarkIcon color={colors.grey} size='48px'/>
-    <CloseIcon color={colors.grey} size='48px'/>
-    <HeartFilledIcon color={colors.grey} size='48px'/>
-    <HeartIcon color={colors.grey} size='48px'/>
-    <InfoIcon color={colors.grey} size='48px'/>
-    <KeyIcon color={colors.grey} size='48px'/>
-    <LockedAddressIcon color={colors.grey} size='48px'/>
-    <SqftIcon color={colors.grey} size='48px'/>
-
+    <div style={ {color: colors.grey700 } }>
+      <AddressIcon size='48px'/>
+      <ArrowDownIcon size='48px'/>
+      <ArrowLeftIcon size='48px'/>
+      <ArrowRightIcon size='48px'/>
+      <ArrowUpIcon size='48px'/>
+      <BedBathIcon size='48px'/>
+      <BellIcon size='48px'/>
+      <CheckmarkIcon size='48px'/>
+      <CloseIcon size='48px'/>
+      <HeartFilledIcon size='48px'/>
+      <HeartIcon size='48px'/>
+      <InfoIcon size='48px'/>
+      <KeyIcon size='48px'/>
+      <LockedAddressIcon size='48px'/>
+      <SqftIcon size='48px'/>
+    </div>
 </Playground>
 
 ## Props
