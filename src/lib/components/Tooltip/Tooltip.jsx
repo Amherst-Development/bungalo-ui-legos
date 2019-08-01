@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../../styles/colors/colors'
@@ -130,7 +130,24 @@ const Tooltip = ((props) => {
     direction, text, className, children,
   } = props
 
+  const node = useRef()
   const [active, setActive] = useState(false)
+
+  const handlePageClick = (e) => {
+    if (node.current.contains(e.target)) {
+      return
+    }
+
+    setActive(false)
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handlePageClick)
+
+    return () => {
+      document.removeEventListener('mousedown', handlePageClick)
+    }
+  }, [])
 
   const handleMouseOver = () => {
     setActive(true)
@@ -144,17 +161,13 @@ const Tooltip = ((props) => {
     setActive(!active)
   }
 
-  const handleBlur = () => {
-    setActive(false)
-  }
-
   return (
     <div
       className={ `lego-tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
       onFocus={ handleFocus }
-      onBlur={ handleBlur }
+      ref={ node }
     >
       <TooltipMessage className={ `tooltip-container ${ direction }` } aria-hidden={ !active }>
         <p className='tooltip-message'>{ text }</p>
