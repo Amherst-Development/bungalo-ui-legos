@@ -138,40 +138,28 @@ const Tooltip = ((props) => {
     window.console.log('***Node current: ', node.current)
     window.console.log('***E Target: ', e.target)
     if (node.current.contains(e.target)) {
-      return
+      setActive(true)
     }
 
     setActive(false)
   }
-
-  const handlePageTouch = (e) => {
-    window.console.log('***E Touch: ', e)
-    window.console.log('***Node current: ', node.current)
-    window.console.log('***E Target: ', e.target)
-    if (node.current.contains(e.target)) {
-      return
-    }
-
-    setActive(false)
-  }
-
 
   useEffect(() => {
     window.console.log('***TEST')
     document.addEventListener('mousedown', handlePageClick)
-    document.addEventListener('touchstart', handlePageTouch)
 
     return () => {
       document.removeEventListener('mousedown', handlePageClick)
-      document.removeEventListener('touchstart', handlePageTouch)
     }
   }, [])
 
   const handleMouseOver = () => {
+    window.console.log('***Mouse over handled')
     setActive(true)
   }
 
   const handleMouseLeave = () => {
+    window.console.log('***Mouse leave handled')
     setActive(false)
   }
 
@@ -187,7 +175,8 @@ const Tooltip = ((props) => {
 
 
   return (
-    <div
+    <button
+      type='button'
       className={ `lego-tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
@@ -199,7 +188,7 @@ const Tooltip = ((props) => {
         <p className='tooltip-message'>{ text }</p>
       </TooltipMessage>
       {children}
-    </div>
+    </button>
   )
 })
 
@@ -218,7 +207,13 @@ export default styled(Tooltip)`
   font-family: 'Graphik-Regular';
   cursor: pointer;
   position: absolute;
+  background: none;
+  border: none;
 
+  &:focus {
+    outline: none;
+    color: ${ colors.grey700 };
+  }
   &.active {
     .tooltip-container {
         z-index: 300;
