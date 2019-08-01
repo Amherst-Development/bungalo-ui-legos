@@ -176,8 +176,15 @@ const Tooltip = ((props) => {
   }
 
   const handleFocus = () => {
-    setActive(!active)
+    window.console.log('***Focus handled')
+    setActive(true)
   }
+
+  const handleBlur = () => {
+    window.console.log('***Blur handled')
+    setActive(false)
+  }
+
 
   return (
     <div
@@ -185,6 +192,7 @@ const Tooltip = ((props) => {
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
       onFocus={ handleFocus }
+      onBlur={ handleBlur }
       ref={ node }
     >
       <TooltipMessage className={ `tooltip-container ${ direction }` } aria-hidden={ !active }>
