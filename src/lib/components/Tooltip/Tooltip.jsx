@@ -157,12 +157,13 @@ const Tooltip = ((props) => {
 
 
   useEffect(() => {
+    window.console.log('***TEST')
     document.addEventListener('mousedown', handlePageClick)
-    document.addEventListener('touchdown', handlePageTouch)
+    document.addEventListener('touchstart', handlePageTouch)
 
     return () => {
-      document.addEventListener('mousedown', handlePageClick)
-      document.addEventListener('mousedown', handlePageTouch)
+      document.removeEventListener('mousedown', handlePageClick)
+      document.removeEventListener('touchstart', handlePageTouch)
     }
   }, [])
 
