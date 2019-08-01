@@ -134,6 +134,9 @@ const Tooltip = ((props) => {
   const [active, setActive] = useState(false)
 
   const handlePageClick = (e) => {
+    window.console.log('***E Click: ', e)
+    window.console.log('***Node current: ', node.current)
+    window.console.log('***E Target: ', e.target)
     if (node.current.contains(e.target)) {
       return
     }
@@ -141,11 +144,25 @@ const Tooltip = ((props) => {
     setActive(false)
   }
 
+  const handlePageTouch = (e) => {
+    window.console.log('***E Touch: ', e)
+    window.console.log('***Node current: ', node.current)
+    window.console.log('***E Target: ', e.target)
+    if (node.current.contains(e.target)) {
+      return
+    }
+
+    setActive(false)
+  }
+
+
   useEffect(() => {
     document.addEventListener('mousedown', handlePageClick)
+    document.addEventListener('touchdown', handlePageTouch)
 
     return () => {
-      document.removeEventListener('mousedown', handlePageClick)
+      document.addEventListener('mousedown', handlePageClick)
+      document.addEventListener('mousedown', handlePageTouch)
     }
   }, [])
 
