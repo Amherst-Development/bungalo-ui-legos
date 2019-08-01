@@ -144,12 +144,17 @@ const Tooltip = ((props) => {
     setActive(!active)
   }
 
+  const handleBlur = () => {
+    setActive(false)
+  }
+
   return (
     <div
       className={ `lego-tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
       onFocus={ handleFocus }
+      onBlur={ handleBlur }
     >
       <TooltipMessage className={ `tooltip-container ${ direction }` } aria-hidden={ !active }>
         <p className='tooltip-message'>{ text }</p>
