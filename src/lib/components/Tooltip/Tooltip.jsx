@@ -134,42 +134,48 @@ const Tooltip = ((props) => {
   const [active, setActive] = useState(false)
 
   const handlePageClick = (e) => {
-    window.console.log('***E Click: ', e)
-    window.console.log('***Node current: ', node.current)
-    window.console.log('***E Target: ', e.target)
     if (node.current.contains(e.target)) {
-      setActive(true)
+      return
     }
 
     setActive(false)
   }
 
   useEffect(() => {
-    window.console.log('***TEST')
-    document.addEventListener('mousedown', handlePageClick)
+    document.addEventListener('touchstart', handlePageClick)
 
     return () => {
-      document.removeEventListener('mousedown', handlePageClick)
+      document.removeEventListener('touchstart', handlePageClick)
     }
   }, [])
 
+  const isTouchDevice = () => {
+    return 'ontouchstart' in window
+  }
+
   const handleMouseOver = () => {
-    window.console.log('***Mouse over handled')
-    setActive(true)
+    if (!isTouchDevice) {
+      setActive(true)
+    }
   }
 
   const handleMouseLeave = () => {
-    window.console.log('***Mouse leave handled')
-    setActive(false)
+    if (!isTouchDevice) {
+      setActive(false)
+    }
+  }
+
+  const handleOnClick = () => {
+    if (isTouchDevice) {
+      setActive(!active)
+    }
   }
 
   const handleFocus = () => {
-    window.console.log('***Focus handled')
     setActive(true)
   }
 
   const handleBlur = () => {
-    window.console.log('***Blur handled')
     setActive(false)
   }
 
@@ -180,6 +186,7 @@ const Tooltip = ((props) => {
       className={ `lego-tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
+      onClick={ handleOnClick }
       onFocus={ handleFocus }
       onBlur={ handleBlur }
       ref={ node }
