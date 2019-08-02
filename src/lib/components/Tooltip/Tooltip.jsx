@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -179,10 +180,8 @@ const Tooltip = ((props) => {
     setActive(false)
   }
 
-
   return (
-    <button
-      type='button'
+    <div
       className={ `lego-tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
@@ -195,7 +194,7 @@ const Tooltip = ((props) => {
         <p className='tooltip-message'>{ text }</p>
       </TooltipMessage>
       {children}
-    </button>
+    </div>
   )
 })
 
@@ -213,15 +212,7 @@ Tooltip.defaultProps = {
 export default styled(Tooltip)`
   font-family: 'Graphik-Regular';
   cursor: pointer;
-  position: absolute;
-  background: none;
-  border: none;
-  padding: 0;
-  
-  &:focus {
-    outline: none;
-    color: ${ colors.grey700 };
-  }
+  position: absolute;  
   &.active {
     .tooltip-container {
         z-index: 300;
