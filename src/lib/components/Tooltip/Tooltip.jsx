@@ -154,19 +154,19 @@ const Tooltip = ((props) => {
   }
 
   const handleMouseOver = () => {
-    if (!isTouchDevice) {
+    if (!isTouchDevice()) {
       setActive(true)
     }
   }
 
   const handleMouseLeave = () => {
-    if (!isTouchDevice) {
+    if (!isTouchDevice()) {
       setActive(false)
     }
   }
 
   const handleOnClick = () => {
-    if (isTouchDevice) {
+    if (isTouchDevice()) {
       setActive(!active)
     }
   }
@@ -216,7 +216,8 @@ export default styled(Tooltip)`
   position: absolute;
   background: none;
   border: none;
-
+  padding: 0;
+  
   &:focus {
     outline: none;
     color: ${ colors.grey700 };
