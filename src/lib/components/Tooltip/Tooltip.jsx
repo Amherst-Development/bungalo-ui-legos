@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../../styles/colors/colors'
@@ -130,18 +131,53 @@ const Tooltip = ((props) => {
     direction, text, className, children,
   } = props
 
+  const node = useRef()
   const [active, setActive] = useState(false)
 
-  const handleMouseOver = () => {
-    setActive(true)
-  }
+  const handlePageClick = (e) => {
+    if (node.current.contains(e.target)) {
+      return
+    }
 
-  const handleMouseLeave = () => {
     setActive(false)
   }
 
+  useEffect(() => {
+    document.addEventListener('touchstart', handlePageClick)
+
+    return () => {
+      document.removeEventListener('touchstart', handlePageClick)
+    }
+  }, [])
+
+  const isTouchDevice = () => {
+    return 'ontouchstart' in window
+  }
+
+  const handleMouseOver = () => {
+    if (!isTouchDevice()) {
+      setActive(true)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (!isTouchDevice()) {
+      setActive(false)
+    }
+  }
+
+  const handleOnClick = () => {
+    if (isTouchDevice()) {
+      setActive(!active)
+    }
+  }
+
   const handleFocus = () => {
-    setActive(!active)
+    setActive(true)
+  }
+
+  const handleBlur = () => {
+    setActive(false)
   }
 
   return (
@@ -149,7 +185,10 @@ const Tooltip = ((props) => {
       className={ `lego-tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
+      onClick={ handleOnClick }
       onFocus={ handleFocus }
+      onBlur={ handleBlur }
+      ref={ node }
     >
       <TooltipMessage className={ `tooltip-container ${ direction }` } aria-hidden={ !active }>
         <p className='tooltip-message'>{ text }</p>
@@ -173,8 +212,7 @@ Tooltip.defaultProps = {
 export default styled(Tooltip)`
   font-family: 'Graphik-Regular';
   cursor: pointer;
-  position: absolute;
-
+  position: absolute;  
   &.active {
     .tooltip-container {
         z-index: 300;
