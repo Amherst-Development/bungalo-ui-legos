@@ -149,7 +149,7 @@ export class Button extends Component {
     `
 
     const TextButton = styled(DefaultButton)`
-      background: transparent;
+      background: ${ colors.white };
       color: ${ getColor(color).main };
       &:hover {
         color: ${ getColor(color).hoverText };
