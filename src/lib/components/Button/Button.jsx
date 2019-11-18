@@ -83,6 +83,7 @@ export class Button extends Component {
     const {
       size,
       fullwidth,
+      dataCy,
       disabled,
       color,
       variant,
@@ -164,26 +165,26 @@ export class Button extends Component {
     switch (variant) {
       case 'raised':
         return (
-          <RaisedButton disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <RaisedButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </RaisedButton>
         )
       case 'flat':
         return (
-          <FlatButton disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <FlatButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </FlatButton>
         )
       case 'outlined':
         return (
-          <OutlinedButton disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <OutlinedButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </OutlinedButton>
         )
       case 'text':
       default:
         return (
-          <TextButton disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <TextButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
             {children}
           </TextButton>
         )
@@ -224,10 +225,15 @@ Button.propTypes = {
    * If `true`, the button will be disabled.
    */
   disabled: PropTypes.bool,
+  /**
+   * A string for automated testing
+   */
+  dataCy: PropTypes.string,
 }
 
 Button.defaultProps = {
   color: 'default',
+  dataCy: 'btn',
   disabled: false,
   variant: 'text',
   size: 'default',
