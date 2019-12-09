@@ -6,7 +6,7 @@ This is a project which aims to simplify and standardize the components we can u
 
 ### `npm docz:dev`
 
-Runs the documentation in development mode.<br>
+Runs the documentation in development mode.<br/>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 If port 3000 is taken, it will bump it up to 3001. 
 
@@ -14,6 +14,6 @@ The page reloads if you make edits. You can find the [Docz documentation here](h
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
+Launches the test runner in the interactive watch mode.<br/>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 

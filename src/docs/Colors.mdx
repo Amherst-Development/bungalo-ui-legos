@@ -3,8 +3,8 @@ name: Colors
 route: /colors
 ---
 
-import { Playground, PropsTable } from 'docz'
-import { ColorSwatch, ColorsWrapper } from '../docsHelpers'
+import { Playground, Props } from 'docz'
+import { ColorSwatch } from '../docsHelpers'
 import colors from '../../lib/styles/colors/colors.js'
 
 # Colors
@@ -15,154 +15,121 @@ When you add a new color, be sure to add it to both the scss and js files.
 Look at `lib/components/Button/Button.jsx` to see how to import and use the colors in these components.
 
 <Playground>
-    <ColorsWrapper>
-        <div>
-            <div>Blue: </div>
-            <ColorSwatch name="blue900" />
-            <ColorSwatch name="blue800" />
-            <ColorSwatch name="blue700" />
-            <ColorSwatch name="blue600" />
-            <ColorSwatch name="blue500" />
-            <ColorSwatch name="blue400" />
-            <ColorSwatch name="blue300" />
-            <ColorSwatch name="blue200" />
-            <ColorSwatch name="blue100" />
-        </div>
+    <div>
+        <div>Blue: </div>
+        <ColorSwatch name="blue900" />
+        <ColorSwatch name="blue800" />
+        <ColorSwatch name="blue700" />
+        <ColorSwatch name="blue600" />
+        <ColorSwatch name="blue500" />
+        <ColorSwatch name="blue400" />
+        <ColorSwatch name="blue300" />
+        <ColorSwatch name="blue200" />
+        <ColorSwatch name="blue100" />
+    </div>
 
-        <div>
-            <div>Orange: </div>
-            <ColorSwatch name="orange900" />
-            <ColorSwatch name="orange800" />
-            <ColorSwatch name="orange700" />
-            <ColorSwatch name="orange600" />
-            <ColorSwatch name="orange500" />
-            <ColorSwatch name="orange400" />
-            <ColorSwatch name="orange300" />
-            <ColorSwatch name="orange200" />
-            <ColorSwatch name="orange100" />
-        </div>
+    <div>
+        <div>Orange: </div>
+        <ColorSwatch name="orange900" />
+        <ColorSwatch name="orange800" />
+        <ColorSwatch name="orange700" />
+        <ColorSwatch name="orange600" />
+        <ColorSwatch name="orange500" />
+        <ColorSwatch name="orange400" />
+        <ColorSwatch name="orange300" />
+        <ColorSwatch name="orange200" />
+        <ColorSwatch name="orange100" />
+    </div>
 
-        <div>
-            <div>Creme: </div>
-            <ColorSwatch name="creme900" />
-            <ColorSwatch name="creme800" />
-            <ColorSwatch name="creme700" />
-            <ColorSwatch name="creme600" />
-            <ColorSwatch name="creme500" />
-            <ColorSwatch name="creme400" />
-            <ColorSwatch name="creme300" />
-            <ColorSwatch name="creme200" />
-            <ColorSwatch name="creme100" />
-        </div>
-    </ColorsWrapper>
-    <ColorsWrapper>
-        <div>
-            <div>Green: </div>
-            <ColorSwatch name="green900" />
-            <ColorSwatch name="green800" />
-            <ColorSwatch name="green700" />
-            <ColorSwatch name="green600" />
-            <ColorSwatch name="green500" />
-            <ColorSwatch name="green400" />
-            <ColorSwatch name="green300" />
-            <ColorSwatch name="green200" />
-            <ColorSwatch name="green100" />
-        </div>
+    <div>
+        <div>Creme: </div>
+        <ColorSwatch name="creme900" />
+        <ColorSwatch name="creme800" />
+        <ColorSwatch name="creme700" />
+        <ColorSwatch name="creme600" />
+        <ColorSwatch name="creme500" />
+        <ColorSwatch name="creme400" />
+        <ColorSwatch name="creme300" />
+        <ColorSwatch name="creme200" />
+        <ColorSwatch name="creme100" />
+    </div>
 
-        <div>
-            <div>Yellow: </div>
-            <ColorSwatch name="yellow900" />
-            <ColorSwatch name="yellow800" />
-            <ColorSwatch name="yellow700" />
-            <ColorSwatch name="yellow600" />
-            <ColorSwatch name="yellow500" />
-            <ColorSwatch name="yellow400" />
-            <ColorSwatch name="yellow300" />
-            <ColorSwatch name="yellow200" />
-            <ColorSwatch name="yellow100" />
-        </div>
+    <div>
+        <div>Green: </div>
+        <ColorSwatch name="green900" />
+        <ColorSwatch name="green800" />
+        <ColorSwatch name="green700" />
+        <ColorSwatch name="green600" />
+        <ColorSwatch name="green500" />
+        <ColorSwatch name="green400" />
+        <ColorSwatch name="green300" />
+        <ColorSwatch name="green200" />
+        <ColorSwatch name="green100" />
+    </div>
 
-        <div>
-            <div>Brown: </div>
-            <ColorSwatch name="brown900" />
-            <ColorSwatch name="brown800" />
-            <ColorSwatch name="brown700" />
-            <ColorSwatch name="brown600" />
-            <ColorSwatch name="brown500" />
-            <ColorSwatch name="brown400" />
-            <ColorSwatch name="brown300" />
-            <ColorSwatch name="brown200" />
-            <ColorSwatch name="brown100" />
+    <div>
+        <div>Yellow: </div>
+        <ColorSwatch name="yellow900" />
+        <ColorSwatch name="yellow800" />
+        <ColorSwatch name="yellow700" />
+        <ColorSwatch name="yellow600" />
+        <ColorSwatch name="yellow500" />
+        <ColorSwatch name="yellow400" />
+        <ColorSwatch name="yellow300" />
+        <ColorSwatch name="yellow200" />
+        <ColorSwatch name="yellow100" />
+    </div>
 
-        </div>
-    </ColorsWrapper>
+    <div>
+        <div>Brown: </div>
+        <ColorSwatch name="brown900" />
+        <ColorSwatch name="brown800" />
+        <ColorSwatch name="brown700" />
+        <ColorSwatch name="brown600" />
+        <ColorSwatch name="brown500" />
+        <ColorSwatch name="brown400" />
+        <ColorSwatch name="brown300" />
+        <ColorSwatch name="brown200" />
+        <ColorSwatch name="brown100" />
 
-    <ColorsWrapper>
-        <div>
-            <div>Dark Blue: </div>
-            <ColorSwatch name="darkblue900" />
-            <ColorSwatch name="darkblue800" />
-            <ColorSwatch name="darkblue700" />
-            <ColorSwatch name="darkblue600" />
-            <ColorSwatch name="darkblue500" />
-            <ColorSwatch name="darkblue400" />
-            <ColorSwatch name="darkblue300" />
-            <ColorSwatch name="darkblue200" />
-            <ColorSwatch name="darkblue100" />
-        </div>
+    </div>
 
-        <div>
-            <div>Dark Orange: </div>
-            <ColorSwatch name="darkorange900" />
-            <ColorSwatch name="darkorange800" />
-            <ColorSwatch name="darkorange700" />
-            <ColorSwatch name="darkorange600" />
-            <ColorSwatch name="darkorange500" />
-            <ColorSwatch name="darkorange400" />
-            <ColorSwatch name="darkorange300" />
-            <ColorSwatch name="darkorange200" />
-            <ColorSwatch name="darkorange100" />
-        </div>
+    <div>
+        <div>Dark Blue: </div>
+        <ColorSwatch name="darkblue900" />
+        <ColorSwatch name="darkblue800" />
+        <ColorSwatch name="darkblue700" />
+        <ColorSwatch name="darkblue600" />
+        <ColorSwatch name="darkblue500" />
+        <ColorSwatch name="darkblue400" />
+        <ColorSwatch name="darkblue300" />
+        <ColorSwatch name="darkblue200" />
+        <ColorSwatch name="darkblue100" />
+    </div>
 
-        <div>
-            <div>Grey: </div>
-            <ColorSwatch name="grey1000" />
-            <ColorSwatch name="grey900" />
-            <ColorSwatch name="grey800" />
-            <ColorSwatch name="grey700" />
-            <ColorSwatch name="grey600" />
-            <ColorSwatch name="grey500" />
-            <ColorSwatch name="grey400" />
-            <ColorSwatch name="grey300" />
-            <ColorSwatch name="grey200" />
-            <ColorSwatch name="grey100" />
-            <ColorSwatch name="grey0" />
-        </div>
-    </ColorsWrapper>
+    <div>
+        <div>Dark Orange: </div>
+        <ColorSwatch name="darkorange900" />
+        <ColorSwatch name="darkorange800" />
+        <ColorSwatch name="darkorange700" />
+        <ColorSwatch name="darkorange600" />
+        <ColorSwatch name="darkorange500" />
+        <ColorSwatch name="darkorange400" />
+        <ColorSwatch name="darkorange300" />
+        <ColorSwatch name="darkorange200" />
+        <ColorSwatch name="darkorange100" />
+    </div>
 
-    
-    <div>Old Colors: </div>
-    <ColorSwatch name="tangerine" />
-    <ColorSwatch name="blue" />
-    <ColorSwatch name="blueTint" />
-    <ColorSwatch name="blueLight" />
-    <ColorSwatch name="creme" />
-    <ColorSwatch name="cremeTint" />
-    <ColorSwatch name="cremeLight" />
-    <ColorSwatch name="orange" />
-    <ColorSwatch name="red" />
-    <ColorSwatch name="brass" />
-    <ColorSwatch name="brassTint" />
-    <ColorSwatch name="lemon" />
-    <ColorSwatch name="lemonTint" />
-    <ColorSwatch name="lime" />
-    <ColorSwatch name="limeTint" />
-    <ColorSwatch name="blueberry" />
-    <ColorSwatch name="black" />
-    <ColorSwatch name="blackTint" />
-    <ColorSwatch name="blackLight" />
-    <ColorSwatch name="grey" />
-    <ColorSwatch name="greyTint" />
-    <ColorSwatch name="greyLight" />
-    <ColorSwatch name="white" />
+    <div>
+        <div>Grey: </div>
+        <ColorSwatch name="grey900" />
+        <ColorSwatch name="grey800" />
+        <ColorSwatch name="grey700" />
+        <ColorSwatch name="grey600" />
+        <ColorSwatch name="grey500" />
+        <ColorSwatch name="grey400" />
+        <ColorSwatch name="grey300" />
+        <ColorSwatch name="grey200" />
+        <ColorSwatch name="grey100" />
+    </div>
 </Playground>
