@@ -11,8 +11,7 @@ export default class IconWrapper extends Component {
         margin: 8px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: middle;
+        align-items: center;
       `
     return (
       <Wrapper>
