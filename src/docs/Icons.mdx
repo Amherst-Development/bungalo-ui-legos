@@ -1,9 +1,10 @@
 ---
 name: Icons
 route: /icons
+menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import colors from '../../lib/styles/colors/colors.js'
 import { IconWrapper } from '../docsHelpers'
 
@@ -31,7 +32,7 @@ import {
 Icons are found and edited inside `lib/components/Icons`
 
 <Playground>
-    <div style={ {color: colors.grey700} }>
+    <div style={ {color: colors.grey700, display: 'flex', flexWrap: 'wrap', alignItems: 'center', width: '100%'} }>
       <IconWrapper name='AddressIcon'>
         <AddressIcon size='48px'/>
       </IconWrapper>
@@ -87,4 +88,4 @@ Icons are found and edited inside `lib/components/Icons`
 </Playground>
 
 ## Props
-<PropsTable of={HeartIcon} />
+<Props of={HeartIcon} />

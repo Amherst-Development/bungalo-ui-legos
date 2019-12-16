@@ -1,9 +1,10 @@
 ---
 name: Tooltip
 route: /tooltip
+menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import { Tooltip } from '../lib'
 import { InfoIcon } from '../lib/components/Icons'
 import colors from '../../lib/styles/colors/colors.js'
@@ -14,60 +15,76 @@ import { MarginWrapper } from '../docsHelpers'
 
 ## Default/Top Tooltip
 <Playground>
-    <Tooltip direction='tooltip-top' text='This is a top tooltip'>
-        <InfoIcon color={colors.blackTint} size='36px'/>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-top' text='This is a top tooltip'>
+            <InfoIcon color={colors.blackTint} size='36px'/>
+        </Tooltip>
+    </div>
 </Playground>
 
 ## Bottom Tooltip
 <Playground>
-    <Tooltip direction='tooltip-bottom' text='This is a bottom tooltip'>
-        <InfoIcon color={colors.blackTint} size='36px'/>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-bottom' text='This is a bottom tooltip'>
+            <InfoIcon color={colors.blackTint} size='36px'/>
+        </Tooltip>
+    </div>
 </Playground>
 
 
 ## Left Tooltip
 <Playground>
-    <Tooltip direction='tooltip-left' text='This is a left tooltip'>
-        <InfoIcon color={colors.blackTint} size='36px'/>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-left' text='This is a left tooltip'>
+            <InfoIcon color={colors.blackTint} size='36px'/>
+        </Tooltip>
+    </div>
 </Playground>
 
 ## Right Tooltip
 <Playground>
-    <Tooltip direction='tooltip-right' text='This is a right tooltip'>
-        <InfoIcon color={colors.blackTint} size='36px'/>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-right' text='This is a right tooltip'>
+            <InfoIcon color={colors.blackTint} size='36px'/>
+        </Tooltip>
+    </div>
 </Playground>
 
 ## Bottom Left Tooltip
 <Playground>
-    <Tooltip direction='tooltip-bottom-left' text='This is a bottom left tooltip'>
-        <InfoIcon color={colors.blackTint} size='36px'/>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-bottom-left' text='This is a bottom left tooltip'>
+            <InfoIcon color={colors.blackTint} size='36px'/>
+        </Tooltip>
+    </div>
 </Playground>
 
 ## Bottom Right Tooltip
 <Playground>
-    <Tooltip direction='tooltip-bottom-right' text='This is a bottom right tooltip'>
-        <InfoIcon color={colors.blackTint} size='36px'/>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-bottom-right' text='This is a bottom right tooltip'>
+            <InfoIcon color={colors.blackTint} size='36px'/>
+        </Tooltip>
+    </div>
 </Playground>
 
 ## Top Left Tooltip
 <Playground>
-    <Tooltip direction='tooltip-top-left' text='This is a top left tooltip'>
-        <InfoIcon color={colors.blackTint} size='36px'/>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-top-left' text='This is a top left tooltip'>
+            <InfoIcon color={colors.blackTint} size='36px'/>
+        </Tooltip>
+    </div>
 </Playground>
 
 ## Top Right Tooltip
 <Playground>
-    <Tooltip direction='tooltip-top-right' text='This is a top right tooltip'>
-        <div>Text here</div>
-    </Tooltip>
+    <div style={ {height: '42px', padding: '8px'} }>
+        <Tooltip direction='tooltip-top-right' text='This is a top right tooltip'>
+            <div>Text here</div>
+        </Tooltip>
+    </div>
 </Playground>
 
 ## Props
-<PropsTable of={Tooltip} />
+<Props of={Tooltip} />

@@ -5,17 +5,17 @@ route: /
 
 # Welcome to Bungalo UI
 
-## Commands:
-**Run Docs:**`npm run docz:dev`
+## Getting Started
+**Run Docs:** `yarn docz:dev`
 
-**Build Components:**`npm run lib`
+**Build Components:** `yarn lib`
 
-**Run Tests:**`npm run test`
+**Run Tests:** `yarn test`
 
-## Test in bh-web:
+## Test in bh-web
 - Create Branch in bungalo-ui-legos
 - Do your work on a component
-- run `npm run lib` to build the component library
+- run `yarn lib` to build the component library
 - commit & push your changes and the lib build
 - Go to bh-web repo
 - in `package.json` bungalo-ui-legos dependency change the info after the `#` to your branch name
@@ -23,11 +23,11 @@ route: /
 - in bh-web repo run `rm -rf node_modules/bungalo-ui-legos && npm install` to get your latest code.
 - Test away!
 
-## Deploy your new UI changes:
+## Deploy your new UI changes
 - Create Branch in bungalo-ui-legos
 - Do your work on a component
 - Go to the main `package.json` and increment the version number. 
-- run `npm run lib` to build the component library
+- run `yarn lib` to build the component library
 - commit & push your changes and the lib build
 - create PR & merge to master. 
 - **in git** tag your merge with the incremented version number in this format: `vX.X.X (v0.1.0)`
