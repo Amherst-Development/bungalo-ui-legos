@@ -67,6 +67,11 @@
     "@babel/cli": "^7.2.3",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.3.12",
+    "@storybook/addon-links": "^5.3.12",
+    "@storybook/addons": "^5.3.12",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.12",
     "jest-styled-components": "^6.3.1",
     "react-test-renderer": "^16.7.0"
   },
@@ -74,6 +79,8 @@
     "start": "scripts/start.js",
     "lib": "rm -rf lib && babel src/lib --out-dir lib --copy-files",
     "test": "node scripts/test.js",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
