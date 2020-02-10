@@ -2,6 +2,7 @@ import React from 'react'
 import { addParameters } from '@storybook/react'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 import colors from '../lib/styles/colors/colors.js'
+import '../lib/styles/fonts/fonts.scss'
 import { IconWrapper } from '../src/docsHelpers'
 import {
   AddressIcon,
@@ -35,7 +36,13 @@ export default {
 }
 export const AllIcons = () => (
   <div style={ {
-    color: colors.grey700, display: 'flex', flexWrap: 'wrap', alignItems: 'center', width: '100%',
+    color: colors.grey700,
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    width: '100%',
+    fontFamily: 'Graphik-Regular',
+    fontSize: '0.9rem',
   } }
   >
     <IconWrapper name='AddressIcon'>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { ColorSwatch } from '../src/docsHelpers'
+import '../lib/styles/fonts/fonts.scss'
 
 export default {
   title: 'Colors',
@@ -7,7 +8,14 @@ export default {
 
 
 export const AllColors = () => (
-  <div style={ { display: 'flex', flexWrap: 'wrap', width: '100%' } }>
+  <div style={ {
+    display: 'flex',
+    flexWrap: 'wrap',
+    width: '100%',
+    fontFamily: 'Graphik-Regular',
+    fontSize: '0.9rem',
+  } }
+  >
     <ColorSwatch name='blue' />
     <ColorSwatch name='orange' />
     <ColorSwatch name='creme' />
