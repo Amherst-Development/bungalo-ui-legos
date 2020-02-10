@@ -126,6 +126,18 @@ const TooltipMessage = styled.div`
   }
 `
 
+const TooltipContainer = styled.div`
+  font-family: 'Graphik-Regular';
+  cursor: pointer;
+  position: absolute;  
+  &.active {
+    .tooltip-container {
+        z-index: 300;
+        display: block;
+    }
+  }
+`
+
 const Tooltip = ((props) => {
   const {
     direction, text, className, children,
@@ -181,7 +193,7 @@ const Tooltip = ((props) => {
   }
 
   return (
-    <div
+    <TooltipContainer
       className={ `lego-tooltip ${ className } ${ active ? ' active' : '' }` }
       onMouseOver={ handleMouseOver }
       onMouseLeave={ handleMouseLeave }
@@ -194,7 +206,7 @@ const Tooltip = ((props) => {
         <p className='tooltip-message'>{ text }</p>
       </TooltipMessage>
       {children}
-    </div>
+    </TooltipContainer>
   )
 })
 
@@ -209,14 +221,4 @@ Tooltip.defaultProps = {
   className: '',
 }
 
-export default styled(Tooltip)`
-  font-family: 'Graphik-Regular';
-  cursor: pointer;
-  position: absolute;  
-  &.active {
-    .tooltip-container {
-        z-index: 300;
-        display: block;
-    }
-  }
-`
+export default Tooltip
