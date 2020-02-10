@@ -81,7 +81,7 @@
     "lib": "rm -rf lib && babel src/lib --out-dir lib --copy-files",
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "eslintConfig": {
     "extends": "react-app"
