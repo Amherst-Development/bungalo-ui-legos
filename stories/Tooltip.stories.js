@@ -15,6 +15,13 @@ export default {
   title: 'Tooltip',
   component: Tooltip,
 }
+
+export const TopTooltip = () => (
+  <Tooltip direction='tooltip-top' text='This is a top tooltip'>
+    <InfoIcon size='36px' />
+  </Tooltip>
+)
+
 export const AllTooltips = () => (
   <div style={ { margin: '32px 128px', padding: '8px', color: colors.grey700 } }>
     <div style={ { height: '42px', padding: '8px' } }>

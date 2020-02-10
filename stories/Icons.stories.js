@@ -32,7 +32,6 @@ addParameters({
 
 export default {
   title: 'Icons',
-  component: InfoIcon,
 }
 export const AllIcons = () => (
   <div style={ {
