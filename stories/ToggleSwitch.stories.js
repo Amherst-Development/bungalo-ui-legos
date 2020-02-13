@@ -19,6 +19,6 @@ export default {
 
 export const SwitchWithNoProps = () => (
   <div style={ { margin: '16px 32px 64px', padding: '32px', color: colors.grey700 } }>
-    <ToggleSwitch />
+    <ToggleSwitch switchId='switch1' />
   </div>
 )
