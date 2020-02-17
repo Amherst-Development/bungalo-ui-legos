@@ -1,35 +1,42 @@
+/* eslint-disable jsx-a11y/label-has-for */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* label-has-for is depricated, and the has-associated-control is not working */
 import React from 'react'
 import PropTypes from 'prop-types'
 import './ToggleSwitch.css'
 
 const ToggleSwitch = (props) => {
-  const { switchId, option1, option2, className } = props
+  const {
+    switchId, optionOff, optionOn, className, size,
+  } = props
 
   return (
-    <>
-      <span>
-        { option1 }
+    <div className='toggle-switch-container'>
+      <span className='option option-off'>
+        { optionOff }
       </span>
       <input role='switch' type='checkbox' aria-checked='false' id={ switchId } />
-      <label className={ `toggle-switch ${ className }` } for={ switchId } /> 
-      <span>
-        { option2 }
+      <label htmlFor={ switchId } className={ `toggle-switch-${ size } ${ className }` } />
+      <span className='option option-on'>
+        { optionOn }
       </span>
-    </>
+    </div>
   )
 }
 
 ToggleSwitch.propTypes = {
   switchId: PropTypes.string.isRequired,
-  option1: PropTypes.string,
-  option2: PropTypes.string,
+  optionOff: PropTypes.string,
+  optionOn: PropTypes.string,
   className: PropTypes.string,
+  size: PropTypes.oneOf(['default', 'small', 'medium', 'large', 'extra-large']),
 }
 
 ToggleSwitch.defaultProps = {
-  option1: '',
-  option2: '',
+  optionOff: '',
+  optionOn: '',
   className: '',
+  size: 'default',
 }
 
 export default ToggleSwitch
