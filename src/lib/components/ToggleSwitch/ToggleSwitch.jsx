@@ -7,7 +7,7 @@ import './ToggleSwitch.css'
 
 const ToggleSwitch = (props) => {
   const {
-    switchId, className, checked, size, disabled, onChange, defaultChecked,
+    switchId, className, checked, size, disabled, onChange, defaultChecked, animationSpeed,
   } = props
 
   return (
@@ -23,7 +23,7 @@ const ToggleSwitch = (props) => {
         onChange={ onChange }
         className='toggle-switch-checkbox'
       />
-      <label htmlFor={ switchId } className={ `toggle-switch-label toggle-switch-${ size } ${ className }` } />
+      <label htmlFor={ switchId } className={ `toggle-switch-label toggle-switch-${ size } switch-animation-${ animationSpeed } ${ className }` } />
     </div>
   )
 }
@@ -35,6 +35,7 @@ ToggleSwitch.propTypes = {
   onChange: PropTypes.func,
   className: PropTypes.string,
   disabled: PropTypes.bool,
+  animationSpeed: PropTypes.oneOf(['default', 'off', 'slow', 'normal', 'fast']),
   size: PropTypes.oneOf(['default', 'sm', 'md', 'lg', 'xl']),
 }
 
@@ -44,6 +45,7 @@ ToggleSwitch.defaultProps = {
   onChange: () => {},
   className: '',
   disabled: false,
+  animationSpeed: 'default',
   size: 'default',
 }
 

@@ -26,8 +26,20 @@
 	position: absolute;
 	background: #fafafa;
 	border-radius: 90px;
-	transition: 0.3s;
 	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.switch-animation-off:after {
+	transition: 0;
+}
+.switch-animation-slow:after {
+	transition: 0.5s;
+}
+.switch-animation-normal:after, .switch-animation-default:after {
+	transition: 0.3s;
+}
+.switch-animation-fast:after {
+	transition: 0.1s;
 }
 
 .toggle-switch-sm {
@@ -42,10 +54,6 @@
 	height: 16px;
 }
 
-.toggle-switch-sm:active:after {
-	width: 20px;
-}
-
 .toggle-switch-default, .toggle-switch-md {
 	width: 40px;
 	height: 16px;
@@ -56,10 +64,6 @@
 	left: -1px;
 	width: 20px;
 	height: 20px;
-}
-
-.toggle-switch-default:active:after, .toggle-switch-md:active:after {
-	width: 30px;
 }
 
 .toggle-switch-lg {
@@ -74,9 +78,6 @@
 	height: 32px;
 }
 
-.toggle-switch-lg:active:after {
-	width: 48px;
-}
 
 .toggle-switch-xl {
 	width: 128px;
@@ -90,9 +91,6 @@
 	height: 64px;
 }
 
-.toggle-switch-xl:active:after {
-	width: 80px;
-}
 
 .toggle-switch-checkbox:focus + .toggle-switch-label:after {
   box-shadow: 0 0 12px 2px #72b5dc;
@@ -119,5 +117,21 @@
 	background: #d4ebcf
 }
 
+/* .toggle-switch-sm:active:after {
+	width: 20px;
+} */
+/* 
+
+.toggle-switch-default:active:after, .toggle-switch-md:active:after {
+	width: 30px;
+} */
+
+/* .toggle-switch-lg:active:after {
+	width: 48px;
+} */
+
+/* .toggle-switch-xl:active:after {
+	width: 80px;
+} */
 
 

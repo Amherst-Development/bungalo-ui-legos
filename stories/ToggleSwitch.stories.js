@@ -37,6 +37,19 @@ export const LargeSwitch = () => <ToggleSwitch switchId='solo-switch-lg' size='l
 
 export const ExtraLargeSwitch = () => <ToggleSwitch switchId='solo-switch-xl' size='xl' onChange={ action('onChange') } />
 
+export const SwitchSpeeds = () => (
+  <div style={ {
+    display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '160px',
+  } }
+  >
+    <ToggleSwitch switchId='switch-default' size='lg' style={ { padding: '32px' } } onChange={ action('onChange') } />
+    <ToggleSwitch switchId='switch-off' size='lg' animationSpeed='off' style={ { padding: '32px' } } onChange={ action('onChange') } />
+    <ToggleSwitch switchId='switch-slow' size='lg' animationSpeed='slow' style={ { padding: '32px' } } onChange={ action('onChange') } />
+    <ToggleSwitch switchId='switch-normal' size='lg' animationSpeed='normal' style={ { padding: '32px' } } onChange={ action('onChange') } />
+    <ToggleSwitch switchId='switch-fast' size='lg' animationSpeed='fast' style={ { padding: '32px' } } onChange={ action('onChange') } />
+  </div>
+)
+
 const TestControlledSwitch = () => {
   const [isChecked, setIsChecked] = useState(true)
 
