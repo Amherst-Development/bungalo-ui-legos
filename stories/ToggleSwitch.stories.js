@@ -49,7 +49,7 @@ const TestControlledSwitch = () => {
       display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '160px',
     } }
     >
-      <button type='button' onClick={ change }>Test</button>
+      <button type='button' onClick={ change }>Toggle Switches</button>
       <ToggleSwitch switchId='controlled-switch-1' size='lg' checked={ !isChecked } onChange={ change } />
       <ToggleSwitch switchId='controlled-switch-2' size='lg' checked={ isChecked } onChange={ change } />
     </div>
