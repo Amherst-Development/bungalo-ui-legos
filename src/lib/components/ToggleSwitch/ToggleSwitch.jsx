@@ -7,35 +7,42 @@ import './ToggleSwitch.css'
 
 const ToggleSwitch = (props) => {
   const {
-    switchId, optionOff, optionOn, className, size,
+    switchId, className, checked, size, disabled, onChange, defaultChecked,
   } = props
 
   return (
     <div className='toggle-switch-container'>
-      <span className='option option-off'>
-        { optionOff }
-      </span>
-      <input role='switch' type='checkbox' aria-checked='false' id={ switchId } />
+      <input
+        role='switch'
+        type='checkbox'
+        checked={ checked }
+        defaultChecked={ defaultChecked }
+        aria-checked='false'
+        id={ switchId }
+        disabled={ disabled }
+        onChange={ onChange }
+      />
       <label htmlFor={ switchId } className={ `toggle-switch-${ size } ${ className }` } />
-      <span className='option option-on'>
-        { optionOn }
-      </span>
     </div>
   )
 }
 
 ToggleSwitch.propTypes = {
   switchId: PropTypes.string.isRequired,
-  optionOff: PropTypes.string,
-  optionOn: PropTypes.string,
+  checked: PropTypes.bool,
+  defaultChecked: PropTypes.bool,
+  onChange: PropTypes.func,
   className: PropTypes.string,
-  size: PropTypes.oneOf(['default', 'small', 'medium', 'large', 'extra-large']),
+  disabled: PropTypes.bool,
+  size: PropTypes.oneOf(['default', 'sm', 'md', 'lg', 'xl']),
 }
 
 ToggleSwitch.defaultProps = {
-  optionOff: '',
-  optionOn: '',
+  checked: undefined,
+  defaultChecked: undefined,
+  onChange: () => {},
   className: '',
+  disabled: false,
   size: 'default',
 }
 
