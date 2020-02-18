@@ -4,7 +4,7 @@
 	align-items: center;
 }
 
-input[type='checkbox'] {
+.toggle-switch-checkbox {
 	height: 0;
 	left: 0;
 	opacity: 0.001;
@@ -13,23 +13,17 @@ input[type='checkbox'] {
 	width: 0;
 }
 
-label {
+.toggle-switch-label {
 	cursor: pointer;
-	width: 128px;
-	height: 48px;
 	background: #BDBCBE;
 	display: block;
 	border-radius: 100px;
 	position: relative;
 }
 
-label:after {
+.toggle-switch-label:after {
 	content: '';
 	position: absolute;
-	top: -8px;
-	left: -1px;
-	width: 64px;
-	height: 64px;
 	background: #fafafa;
 	border-radius: 90px;
 	transition: 0.3s;
@@ -100,32 +94,28 @@ label:after {
 	width: 80px;
 }
 
-input[type='checkbox']:focus + label:after {
+.toggle-switch-checkbox:focus + .toggle-switch-label:after {
   box-shadow: 0 0 12px 2px #72b5dc;
 }
 
-input[type='checkbox']:checked + label {
+.toggle-switch-checkbox:checked + .toggle-switch-label {
 	background: #aad8a0;
 }
 
-input[type='checkbox']:checked + label:after {
+.toggle-switch-checkbox:checked + .toggle-switch-label:after {
 	left: calc(100%);
 	transform: translateX(-100%);
 }
 
-label:active:after {
-	width: 80px;
-}
-
-input[type='checkbox']:disabled + label:after {
+.toggle-switch-checkbox:disabled + .toggle-switch-label:after {
 	background: #EBEBEB
 }
 
-input[type='checkbox']:disabled + label {
+.toggle-switch-checkbox:disabled + .toggle-switch-label {
 	background: #f4f4f4
 }
 
-input[type='checkbox'][disabled]:checked + label {
+.toggle-switch-checkbox[disabled]:checked + .toggle-switch-label {
 	background: #d4ebcf
 }
 
