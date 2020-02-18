@@ -61,3 +61,9 @@ export const ControlledSwitch = () => <TestControlledSwitch />
 export const DisabledSwitch = () => <ToggleSwitch switchId='disabled-switch' size='lg' disabled onChange={ action('onChange') } />
 export const DisabledSwitchOn = () => <ToggleSwitch switchId='disabled-switch' size='lg' disabled onChange={ action('onChange') } defaultChecked />
 
+export const UnstyledSwitch = () => (
+  <div>
+    <input type='checkbox' id='test1' />
+    <label htmlFor='test1'>TEST LABEL</label>
+  </div>
+)

@@ -21,8 +21,9 @@ const ToggleSwitch = (props) => {
         id={ switchId }
         disabled={ disabled }
         onChange={ onChange }
+        className='toggle-switch-checkbox'
       />
-      <label htmlFor={ switchId } className={ `toggle-switch-${ size } ${ className }` } />
+      <label htmlFor={ switchId } className={ `toggle-switch-label toggle-switch-${ size } ${ className }` } />
     </div>
   )
 }
