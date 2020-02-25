@@ -25,7 +25,7 @@ module.exports = {
     config.module.rules.push({
       test: /\.(png|woff|woff2|eot|ttf|svg)$/,
       loaders: ['file-loader'],
-      include: path.resolve(__dirname, '../')
+      include: path.resolve(__dirname, '../src')
     });
     return config;
   },
