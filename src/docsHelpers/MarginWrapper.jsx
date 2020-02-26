@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 function MarginWrapper(props) {
   const AddMargins = styled.div`
+    padding: 24px;
+    box-sizing: border-box;
     * {
         margin: 8px !important;
     }

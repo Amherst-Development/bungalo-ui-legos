@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../../styles/colors/colors'
-import '../../styles/fonts/fonts.scss'
+import '../../styles/fonts/fonts.css'
 
 export class Button extends Component {
   clicky = (e) => {
@@ -165,26 +165,46 @@ export class Button extends Component {
     switch (variant) {
       case 'raised':
         return (
-          <RaisedButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <RaisedButton
+            data-cy={ dataCy }
+            disabled={ disabled }
+            onClick={ this.clicky }
+            className={ className }
+          >
             {children}
           </RaisedButton>
         )
       case 'flat':
         return (
-          <FlatButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <FlatButton
+            data-cy={ dataCy }
+            disabled={ disabled }
+            onClick={ this.clicky }
+            className={ className }
+          >
             {children}
           </FlatButton>
         )
       case 'outlined':
         return (
-          <OutlinedButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <OutlinedButton
+            data-cy={ dataCy }
+            disabled={ disabled }
+            onClick={ this.clicky }
+            className={ className }
+          >
             {children}
           </OutlinedButton>
         )
       case 'text':
       default:
         return (
-          <TextButton data-cy={ dataCy } disabled={ disabled } onClick={ this.clicky } className={ className }>
+          <TextButton
+            data-cy={ dataCy }
+            disabled={ disabled }
+            onClick={ this.clicky }
+            className={ className }
+          >
             {children}
           </TextButton>
         )

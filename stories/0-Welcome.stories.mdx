@@ -1,12 +1,11 @@
----
-name: Home
-route: /
----
+import { Meta }  from '@storybook/addon-docs/blocks';
+
+<Meta title="Welcome" />
 
 # Welcome to Bungalo UI
 
 ## Getting Started
-**Run Docs:** `yarn docz:dev`
+**Run Storybook Docs:** `yarn storybook`
 
 **Build Components:** `yarn lib`
 
@@ -20,7 +19,7 @@ route: /
 - Go to bh-web repo
 - in `package.json` bungalo-ui-legos dependency change the info after the `#` to your branch name
 - ex: `"bungalo-ui-legos": "github:bungalohomes/bungalo-ui-legos#v0.1.0"` to `"bungalo-ui-legos": "github:bungalohomes/bungalo-ui-legos#your-branch-name"`
-- in bh-web repo run `rm -rf node_modules/bungalo-ui-legos && npm install` to get your latest code.
+- in bh-web repo run `rm -rf node_modules/bungalo-ui-legos && yarn install` to get your latest code.
 - Test away!
 
 ## Deploy your new UI changes
@@ -35,6 +34,19 @@ route: /
 - Go to bh-web repo
 - in `package.json` bungalo-ui-legos dependency change the info after the `#` to your new version
 - ex: `"bungalo-ui-legos": "github:bungalohomes/bungalo-ui-legos#v0.1.0"` to `"bungalo-ui-legos": "github:bungalohomes/bungalo-ui-legos#v0.1.1"`
-- in bh-web repo run `rm -rf node_modules/bungalo-ui-legos && npm install` to get your latest code.
+- in bh-web repo run `rm -rf node_modules/bungalo-ui-legos && yarn install` to get your latest code.
 - Now you can use your new or changed components!
 
+## Available Scripts
+
+### `yarn storybook`
+
+Runs the documentation in development mode.<br/>
+Open [http://localhost:6006/](http://localhost:6006/) to view it in the browser.
+
+The page reloads if you make edits. You can find the [Storybook documentation here](https://storybook.js.org/docs/basics/introduction/)
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.<br/>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
