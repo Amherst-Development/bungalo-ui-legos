@@ -7,8 +7,8 @@ This is a project which aims to simplify and standardize the components we can u
 ### `yarn storybook`
 
 Runs the documentation in development mode.<br/>
-Open [http://http://localhost:6006/](http://http://localhost:6006/) to view it in the browser.
-If port 3000 is taken, it will bump it up to 3001. 
+Open [http://localhost:6006/](http://localhost:6006/) to view it in the browser.
+
 
 The page reloads if you make edits. You can find the [Storybook documentation here](https://storybook.js.org/docs/basics/introduction/)
 

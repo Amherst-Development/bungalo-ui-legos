@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../../styles/colors/colors'
-import '../../styles/fonts/fonts.scss'
+import '../../styles/fonts/fonts.css'
 
 export class Button extends Component {
   clicky = (e) => {

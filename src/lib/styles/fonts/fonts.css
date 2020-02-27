@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Lyon Display Medium';
+  font-weight: 600;
+  src:
+    url('./LyonDisplay-Medium-Web.woff2') format("woff2"),
+    url('./LyonDisplay-Medium-Web.woff') format("woff"),
+}
+
+@font-face {
+  font-family: 'Graphik-Regular';
+  font-weight: normal !important;
+  src:
+    url('./Graphik-Regular-Web.woff2') format("woff2"),
+    url('./Graphik-Regular-Web.woff') format("woff"),
+}
+
+@font-face {
+  font-family: 'Graphik-Medium';
+  font-weight: normal !important;
+  src:
+    url('./Graphik-Medium-Web.woff2') format("woff2"),
+    url('./Graphik-Medium-Web.woff') format("woff"),
+}
