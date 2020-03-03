@@ -1,6 +1,6 @@
 import React from 'react'
 import { ColorSwatch } from '../src/docsHelpers'
-import '../lib/styles/fonts/fonts.css'
+import '../lib/styles/fonts/fonts.scss'
 
 export default {
   title: 'Colors',

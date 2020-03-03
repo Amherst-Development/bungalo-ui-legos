@@ -2,7 +2,7 @@ import React from 'react'
 import { addParameters } from '@storybook/react'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 import colors from '../lib/styles/colors/colors.js'
-import '../lib/styles/fonts/fonts.css'
+import '../lib/styles/fonts/fonts.scss'
 import { IconWrapper } from '../src/docsHelpers'
 import {
   AddressIcon,

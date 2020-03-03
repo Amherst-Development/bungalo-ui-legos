@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../../styles/colors/colors'
-import '../../styles/fonts/fonts.css'
+import '../../styles/fonts/fonts.scss'
 
 export const TOOLTIP_DIRECTIONS = {
   RIGHT: 'tooltip-right',
