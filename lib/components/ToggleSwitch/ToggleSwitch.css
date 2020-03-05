@@ -1,0 +1,138 @@
+.toggle-switch-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+}
+
+.toggle-switch-checkbox {
+	height: 0;
+	left: 0;
+	opacity: 0.001;
+	position: absolute;
+	top: 0;
+	width: 0;
+}
+
+.toggle-switch-label {
+	cursor: pointer;
+	background: #BDBCBE;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.toggle-switch-label:after {
+	content: '';
+	position: absolute;
+	background: #fafafa;
+	border-radius: 90px;
+	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.switch-animation-off:after {
+	transition: 0;
+}
+.switch-animation-slow:after {
+	transition: 0.5s;
+}
+.switch-animation-normal:after, .switch-animation-default:after {
+	transition: 0.3s;
+}
+.switch-animation-fast:after {
+	transition: 0.1s;
+}
+
+.toggle-switch-sm {
+	width: 32px;
+	height: 12px;
+}
+
+.toggle-switch-sm:after {
+	top: -2px;
+	left: -1px;
+	width: 16px;
+	height: 16px;
+}
+
+.toggle-switch-default, .toggle-switch-md {
+	width: 40px;
+	height: 16px;
+}
+
+.toggle-switch-default:after, .toggle-switch-md:after {
+	top: -2px;
+	left: -1px;
+	width: 20px;
+	height: 20px;
+}
+
+.toggle-switch-lg {
+	width: 64px;
+	height: 24px;
+}
+
+.toggle-switch-lg:after {
+	top: -4px;
+	left: -1px;
+	width: 32px;
+	height: 32px;
+}
+
+
+.toggle-switch-xl {
+	width: 128px;
+	height: 48px;
+}
+
+.toggle-switch-xl:after {
+	top: -8px;
+	left: -1px;
+	width: 64px;
+	height: 64px;
+}
+
+
+.toggle-switch-checkbox:focus + .toggle-switch-label:after {
+  box-shadow: 0 0 12px 2px #72b5dc;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label {
+	background: #aad8a0;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label:after {
+	left: calc(100%);
+	transform: translateX(-100%);
+}
+
+.toggle-switch-checkbox:disabled + .toggle-switch-label:after {
+	background: #EBEBEB
+}
+
+.toggle-switch-checkbox:disabled + .toggle-switch-label {
+	background: #f4f4f4
+}
+
+.toggle-switch-checkbox[disabled]:checked + .toggle-switch-label {
+	background: #d4ebcf
+}
+
+/* .toggle-switch-sm:active:after {
+	width: 20px;
+} */
+/* 
+
+.toggle-switch-default:active:after, .toggle-switch-md:active:after {
+	width: 30px;
+} */
+
+/* .toggle-switch-lg:active:after {
+	width: 48px;
+} */
+
+/* .toggle-switch-xl:active:after {
+	width: 80px;
+} */
+
+
