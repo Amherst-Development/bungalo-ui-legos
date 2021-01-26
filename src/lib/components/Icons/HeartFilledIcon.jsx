@@ -13,7 +13,7 @@ const HeartFilledIcon = (props) => {
       style={ style }
       className={ className }
       viewBox='0 0 18 18'
-      aria-labelledby='title'
+      aria-labelledby='heart-filled-icon'
       xmlns='http://www.w3.org/2000/svg'
     >
       <g fill='none'>

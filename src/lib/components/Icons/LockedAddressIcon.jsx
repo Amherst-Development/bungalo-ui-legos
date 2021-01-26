@@ -13,7 +13,7 @@ const LockedAddressIcon = (props) => {
       style={ style }
       className={ className }
       viewBox='0 0 59 23'
-      aria-labelledby='title'
+      aria-labelledby='locked-address-icon'
       xmlns='http://www.w3.org/2000/svg'
     >
       <g fill='none' fillRule='evenodd'>
