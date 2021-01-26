@@ -17,7 +17,7 @@ const CloseIcon = (props) => {
       xmlns='http://www.w3.org/2000/svg'
     >
       <g fill='none' fillRule='evenodd'>
-        <title id='title'>Close</title>
+        <title>Close</title>
         <polygon points='0 0 18 0 18 18 0 18' />
         <polygon fill='currentColor' stroke='currentColor' strokeWidth='.5' points='9.931 9.014 14.847 4.001 14.019 3.188 9.111 8.193 4.001 3.18 3.188 4.009 8.29 9.014 3.188 14.019 4.001 14.847 9.111 9.834 14.019 14.84 14.847 14.027' />
       </g>
