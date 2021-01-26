@@ -17,7 +17,7 @@ const ArrowLeftIcon = (props) => {
       xmlns='http://www.w3.org/2000/svg'
     >
       <g fill='none' fillRule='evenodd'>
-        <title>Arrow Left</title>
+        <title id='arrow left icon'>Arrow Left</title>
         <polygon points='0 0 18 0 18 18 0 18' />
         <polygon fill='currentColor' stroke='currentColor' strokeWidth='1' points='5.85 2 5 2.832 11.413 9.11 5 15.168 5.85 16 13 9.11' transform='matrix(-1 0 0 1 18 0)' />
       </g>
